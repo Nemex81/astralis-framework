@@ -6,6 +6,14 @@ Questo registro traccia le revisioni architetturali interne del framework a part
 
 ---
 
+## [META-REV-005] Guardia Condizionale di Simmetria Multi-AI a Livello 0 & Release v3.0.2
+- **Data**: 2026-09-06
+- **Ambito**: Orchestrazione Multi-AI, Scripting Portabile, Protocollo 8 & Protocollo 9
+- **Sintesi**: Codificazione del principio di Attivazione Selettiva (On-Detection o On-Demand) per evitare inquinamento del filesystem e garantire che la sincronizzazione a Livello 0 scatti esclusivamente per i client ausiliari realmente presenti o richiesti dall'utente. Implementato il probing condizionale in aggiorna_ecosistema.ps1 su .codex e .claude con backup automatico e report dedicato per NVDA.
+- **Stato**: Completato
+
+---
+
 ## [META-REV-004] Neutralizzazione Ruoli Operativi, Allineamento Template e Discovery $env:ASTRALIS_HUB
 - **Data**: 2026-09-06
 - **Ambito**: Governance Distribuibile, Scripting Portabile, Multi-AI Symmetry

@@ -189,6 +189,25 @@ if (Test-Path $globalGeminiFile) {
     if ($content -match "## 🛡️ ISOLA PROTETTA UTENTE" -or $content -match "## 🧩 REGOLE & CONSUETUDINI PERSONALIZZATE") {
         Write-Host "[*] Rilevate potenziali regole/consuetudini custom: Modalita AGGIORNAMENTO INTEGRATIVO attiva!" -ForegroundColor Yellow
     }
+
+    # 3.1 Guardia Condizionale di Simmetria Multi-AI a Livello 0 (Probing selettivo assistenti ausiliari)
+    $knownAuxiliaries = @(
+        @{ Name = "OpenAI / GPT Codex"; Dir = (Join-Path $env:USERPROFILE ".codex"); File = "AGENTS.md" },
+        @{ Name = "Anthropic Claude";     Dir = (Join-Path $env:USERPROFILE ".claude"); File = "CLAUDE.md" }
+    )
+
+    foreach ($aux in $knownAuxiliaries) {
+        if (Test-Path $aux.Dir) {
+            $auxFilePath = Join-Path $aux.Dir $aux.File
+            if (Test-Path $auxFilePath) {
+                $auxBak = Join-Path $aux.Dir "$($aux.File).bak"
+                Copy-Item -LiteralPath $auxFilePath -Destination $auxBak -Force
+                Write-Host "[OK] AI Ausiliaria rilevata ($($aux.Name)): creato backup preventivo $auxBak" -ForegroundColor Green
+            } else {
+                Write-Host "[INFO] Cartella $($aux.Name) presente ma $($aux.File) non ancora inizializzato." -ForegroundColor Gray
+            }
+        }
+    }
 } else {
     Write-Host "[!] Genoma Globale non trovato in $globalConfigDir. Eseguire Protocollo Onboarding per la prima installazione." -ForegroundColor Yellow
 }

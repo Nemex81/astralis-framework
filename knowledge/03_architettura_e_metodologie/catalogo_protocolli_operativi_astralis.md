@@ -1,4 +1,4 @@
-# Catalogo dei Protocolli Operativi Ufficiali ASTRALIS (v3.0.1)
+# Catalogo dei Protocolli Operativi Ufficiali ASTRALIS (v3.0.2)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
 # Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Master Hub ASTRALIS
@@ -203,22 +203,22 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
 - **Comandi Trigger**: *"Avvia Protocollo Aggiornamento"*, *"aggiorna il sistema di regole"*, *"aggiorna ASTRALIS a questa versione"*, *"esegui l'upgrade dell'ecosistema"*.
 - **Scopo**: Aggiornare in-place l'infrastruttura di governance su una macchina esistente, fondendo le nuove regole ufficiali con la totale salvaguardia delle personalizzazioni utente e riconciliando retrocompatibilmente tutti i progetti aperti.
 - **Passaggi Operativi (La Pipeline a 3 Fasi: Prima -> Durante -> Dopo)**:
-  1. *Fase 1: Pre-Flight Audit dello Stato Attuale (PRIMA dell'Aggiornamento)*:
-     - Snapshot `.bak` timestampati di `<config-dir>\config\GEMINI.md` e `knowledge_globale/`;
-     - Scansione automatica dei client AI presenti sulla macchina (`.gemini`, `.codex`, `.claude`, `.copilot`) per censire l'ecosistema Multi-AI attivo;
-     - Rilevamento regole/consuetudini custom introdotte dall'utente;
-     - Scansione preventiva del delta versioni tra Master Hub e progetti locali attivi (identificazione di registri revisione legacy, report non conformi, BOM, discrepanze).
-  2. *Fase 2: Aggiornamento Master Hub & Release Starter Kit (DURANTE)*:
-     - Aggiornamento del Genoma Globale incapsulando le consuetudini personali nell'Isola Protetta Utente;
-     - Aggiornamento contestuale delle direttive globali per tutte le AI collaboratrici censite sulla macchina (es. `%USERPROFILE%\.codex\AGENTS.md`, `%USERPROFILE%\.claude\CLAUDE.md`);
-     - Fusione a sezioni dei moduli in `knowledge_globale/` e template in `templates/`;
-     - Rigenerazione dello Starter Kit ZIP versionato (`releases/ASTRALIS_Universal_Starter_Kit_vX.Y.Z.zip`).
-  3. *Fase 3: Post-Flight Migration & Riconciliazione Progetti Attivi (DOPO l'Aggiornamento)*:
-     - *Allineamento Knowledge Locale*: sincronizzazione selettiva delle schede `knowledge/` pertinenti nei progetti attivi;
-     - *Audit del Profilo di Resilienza & Canali Cloud*: verifica sui progetti attivi della presenza della sezione Profilo di Resilienza; se assente, propone la rilevazione deterministica di VCS e dei percorsi ponte/archivio cloud;
-     - *Migrazione Retrocompatibile RRU*: verifica e aggiornamento di `REGISTRO_REVISIONI.md` e `ARCHIVIO_REVISIONI.md` per abilitare il puntamento DRY ai report (`Report di Sessione & File Correlati`) senza alterare i dati storici;
-     - *Bonifica & Conversione Report URCP*: scansione dei report in `docs/report/` e `docs/report/archivio/` e applicazione della normalizzazione a 7 campi, inversione cronologica e pulizia BOM;
-     - *Audit di Conformità & Token Budget*: verifica del rispetto dei 6 Canoni di Meta-Governance; controllo che nessun `GEMINI.md` superi il budget limite di 250 righe, assenza di BOM e integrità di tutti i collegamenti; emissione della **Ricevuta di Conformità Post-Aggiornamento** per NVDA.
+   1. *Fase 1: Pre-Flight Audit dello Stato Attuale (PRIMA dell'Aggiornamento)*:
+      - Snapshot `.bak` timestampati di `<config-dir>\config\GEMINI.md` e `knowledge/`;
+      - *Guardia Condizionale di Simmetria Multi-AI*: Scansione selettiva dei client ausiliari realmente presenti sulla macchina (`.codex`, `.claude`, `.copilot`) o esplicitamente dichiarati dall'utente; se nessun client ausiliario è presente o richiesto, il sistema rimane in Modalità Singola AI snella (zero file creati a vuoto);
+      - Rilevamento regole/consuetudini custom introdotte dall'utente;
+      - Scansione preventiva del delta versioni tra Master Hub e progetti locali attivi (identificazione di registri revisione legacy, report non conformi, BOM, discrepanze).
+   2. *Fase 2: Aggiornamento Master Hub & Release Starter Kit (DURANTE)*:
+      - Aggiornamento del Genoma Globale incapsulando le consuetudini personali nell'Isola Protetta Utente;
+      - *Allineamento Simmetrico Condizionale*: Aggiornamento con backup preventivo delle direttive globali esclusivamente per le AI collaboratrici effettivamente censite o richieste sulla macchina (es. `%USERPROFILE%\.codex\AGENTS.md`, `%USERPROFILE%\.claude\CLAUDE.md`);
+      - Fusione a sezioni dei moduli in `knowledge/` e template in `templates/`;
+      - Rigenerazione dello Starter Kit ZIP versionato (`releases/ASTRALIS_Universal_Starter_Kit_vX.Y.Z.zip`).
+   3. *Fase 3: Post-Flight Migration & Riconciliazione Progetti Attivi (DOPO l'Aggiornamento)*:
+      - *Allineamento Knowledge Locale*: sincronizzazione selettiva delle schede `knowledge/` pertinenti nei progetti attivi;
+      - *Audit del Profilo di Resilienza & Canali Cloud*: verifica sui progetti attivi della presenza della sezione Profilo di Resilienza; se assente, propone la rilevazione deterministica di VCS e dei percorsi ponte/archivio cloud;
+      - *Migrazione Retrocompatibile RRU*: verifica e aggiornamento di `REGISTRO_REVISIONI.md` e `ARCHIVIO_REVISIONI.md` per abilitare il puntamento DRY ai report (`Report di Sessione & File Correlati`) senza alterare i dati storici;
+      - *Bonifica & Conversione Report URCP*: scansione dei report in `docs/report/` e `docs/report/archivio/` e applicazione della normalizzazione a 7 campi, inversione cronologica e pulizia BOM;
+      - *Audit di Conformità & Token Budget*: verifica del rispetto dei 6 Canoni di Meta-Governance; controllo che nessun `GEMINI.md` superi il budget limite di 250 righe, assenza di BOM e integrità di tutti i collegamenti; emissione della **Ricevuta di Conformità Post-Aggiornamento** per NVDA.
 
 ---
 
@@ -226,19 +226,19 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
 - **Comandi Trigger**: *"Avvia Protocollo Onboarding"*, *"configura l'ambiente di lavoro"*, *"inizializza nuovo progetto"*, *"setup nuova macchina"*.
 - **Scopo**: Inizializzare un computer da zero o generare l'albero di un nuovo workspace in meno di un minuto con specializzazione automatica, garantendo zero debito pregresso e piena conformità nativa.
 - **Passaggi Operativi**:
-  1. *Per Nuova Macchina*:
-     - Bootstrap pulito direttamente dall'ultimo Starter Kit ZIP versionato (`ASTRALIS_Universal_Starter_Kit_vX.Y.Z.zip`);
-     - Auto-Riconoscimento AI Attiva & Ruolo Primario: L'assistente rileva l'ambiente in cui opera (Antigravity, Claude, Codex) e si imposta come AI Primaria per default;
-     - Intervista guidata snella (Nome sviluppatore, Uso Screen Reader NVDA/Tastiera, Accessibilità perenne);
-     - Opzione Collaboratori AI Ausiliari: Domanda rapida a 1 riga per NVDA per attivare profili di eventuali collaboratori (GPT Codex, Claude, Copilot); generazione automatica dei rispettivi file globali (`.gemini/`, `.codex/`, `.claude/`);
-     - Creazione dell'albero documentale `docs/` nel Master Hub;
-     - Pre-flight check percorsi dinamici, cloud e hostname (`$env:COMPUTERNAME`).
-  2. *Per Nuovo Progetto*:
-     - Intervista su tecnologia, runtime e dominio (es. mod Java, addon Python, script, narrativa);
-     - Rilevamento adattivo VCS & Canali Cloud (Git vs No-Git con linguaggio calibrato sull'utente e configurazione ponte caldo/archivio);
-     - Generazione cartelle `docs/` (`strategie/attive`, `strategie/archiviate`, `piani/attivi`, `piani/completati`, `report/archivio`), `knowledge/` a due cifre (`00_` .. `NN_`), router locale `GEMINI.md` (o dell'AI primaria) specializzato con Indice Ragionato e Profilo di Resilienza a 4 canali, ed eventuale generazione dei router ausiliari (`AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`) attingendo da `templates/collaboratori_ai/`;
-     - Inizializzazione nativa di `REGISTRO_REVISIONI.md` già provvisto di pointer hub e template report a 7 campi;
-     - Creazione del `README.md` pubblico di root pulito e dedicato alla documentazione funzionale del software.
+   1. *Per Nuova Macchina*:
+      - Bootstrap pulito direttamente dall'ultimo Starter Kit ZIP versionato (`ASTRALIS_Universal_Starter_Kit_vX.Y.Z.zip`);
+      - Auto-Riconoscimento AI Attiva & Ruolo Primario: L'assistente rileva l'ambiente in cui opera (Antigravity, Claude, Codex) e si imposta come AI Primaria per default;
+      - Intervista guidata snella (Nome sviluppatore, Uso Screen Reader NVDA/Tastiera, Accessibilità perenne);
+      - Opzione Collaboratori AI Ausiliari: Domanda rapida a 1 riga per NVDA per attivare profili di eventuali collaboratori (GPT Codex, Claude, Copilot); generazione automatica dei rispettivi file globali (`.codex/`, `.claude/`) *esclusivamente se confermata dall'utente o se tali client risultano già installati sulla macchina*; in caso contrario, opera in Modalità Singola AI snella;
+      - Creazione dell'albero documentale `docs/` nel Master Hub;
+      - Pre-flight check percorsi dinamici, cloud e hostname (`$env:COMPUTERNAME`).
+   2. *Per Nuovo Progetto*:
+      - Intervista su tecnologia, runtime e dominio (es. mod Java, addon Python, script, narrativa);
+      - Rilevamento adattivo VCS & Canali Cloud (Git vs No-Git con linguaggio calibrato sull'utente e configurazione ponte caldo/archivio);
+      - Generazione cartelle `docs/` (`strategie/attive`, `strategie/archiviate`, `piani/attivi`, `piani/completati`, `report/archivio`), `knowledge/` a due cifre (`00_` .. `NN_`), router locale `GEMINI.md` (o dell'AI primaria) specializzato con Indice Ragionato e Profilo di Resilienza a 4 canali, ed eventuale generazione dei router ausiliari (`AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`) attingendo da `templates/collaboratori_ai/`;
+      - Inizializzazione nativa di `REGISTRO_REVISIONI.md` già provvisto di pointer hub e template report a 7 campi;
+      - Creazione del `README.md` pubblico di root pulito e dedicato alla documentazione funzionale del software.
 
 ---
 

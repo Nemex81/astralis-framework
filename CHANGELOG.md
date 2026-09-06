@@ -4,6 +4,18 @@
 
 Tutte le modifiche rilevanti, i rilasci e le evoluzioni del framework universale **ASTRALIS** sono tracciate in questo documento.
 
+## 🚀 [v3.0.2] — 2026-09-06 (Conditional Multi-AI Symmetry Guard & Level 0 Detection)
+
+### 🌟 Orchestrazione Multi-AI Condizionale, Anti-Bloat & Probing Esecutivo
+- **Istituzione della Guardia Condizionale di Simmetria Multi-AI (`orchestrazione_multi_ai_e_collaboratori.md`, Protocolli 8 e 9)**:
+  - Codificato il principio di *Attivazione Selettiva (Anti-Bloat & Zero Inquinamento)*: la gestione e la sincronizzazione di configurazioni per assistenti AI ausiliari (GPT Codex, Claude, Copilot) scattano esclusivamente su *Auto-Discovery* (rilevamento fisico concreto di cartelle client come `.codex` o `.claude` nel sistema operativo o router ausiliari nel workspace) oppure su *Richiesta Esplicita dell'Utente*;
+  - In assenza di client ausiliari o richieste, il sistema opera in *Modalità Singola AI (Lean Mode)* per preservare la massima pulizia del filesystem.
+- **Implementazione Esecutiva nel Tooling (`scripts/aggiorna_ecosistema.ps1`)**:
+  - Aggiunto nella Fase 3 il probing condizionale deterministico per `%USERPROFILE%\.codex` e `%USERPROFILE%\.claude`;
+  - Se rilevati, lo script esegue automaticamente il backup preventivo (`AGENTS.md.bak`, `CLAUDE.md.bak`) e segnala chiaramente lo stato nella ricevuta di conformità per NVDA.
+
+---
+
 ## 🚀 [v3.0.1] — 2026-09-06 (Universal Role Neutrality, Script Hub Discovery & Multi-AI Alignment)
 
 ### 🌟 Perfezionamento Distributivo, Neutralità dei Ruoli & Scripting Portabile

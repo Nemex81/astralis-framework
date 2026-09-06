@@ -1,9 +1,9 @@
-# 🚀 ASTRALIS STARTER KIT — ISTRUZIONI RAPIDE DI AVVIO (v3.0.1)
+# 🚀 ASTRALIS STARTER KIT — ISTRUZIONI RAPIDE DI AVVIO (v3.0.2)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
 # Framework: ASTRALIS (Adaptive Standards for Testing, Rules, Accessibility & Level Integration Systems)
 # Master Hub: <astralis-hub>
 
-Benvenuto in **ASTRALIS v3.0.1**, l'ecosistema di governance a 3 livelli, 12 protocolli operativi, disciplina di versionamento AVF e accessibilità universale di Luca & Antigravity!
+Benvenuto in **ASTRALIS v3.0.2**, l'ecosistema di governance a 3 livelli, 12 protocolli operativi, disciplina di versionamento AVF e accessibilità universale di Luca & Antigravity!
 
 Questo pacchetto ti consente sia di configurare da zero il tuo ambiente in meno di 1 minuto (Protocollo Onboarding), sia di aggiornare un'installazione preesistente preservando al 100% tutte le tue personalizzazioni con l'**Aggiornamento Integrativo a Cascata** (Protocollo Aggiornamento).
 

@@ -58,17 +58,27 @@ Ogni famiglia di assistenti adotta la struttura disaccoppiata a 2 livelli:
 
 ---
 
-## 🔄 4. I TRE MOMENTI SISTEMICI DI INTERCETTAZIONE & LA GUARDIA AUSILIARIA
+## 🔄 4. I TRE MOMENTI SISTEMICI DI INTERCETTAZIONE & LA GUARDIA CONDIZIONALE
 
-1. **Momento 1 — Inizializzazione (Protocollo 9 — Onboarding)**:
+1. **Il Principio di Attivazione Selettiva (Anti-Bloat & Zero Inquinamento)**:
+   - ASTRALIS vieta la creazione o la modifica non necessaria di configurazioni per intelligenze artificiali non utilizzate dall'utente.
+   - La gestione dei collaboratori ausiliari si attiva esclusivamente in presenza di una delle due condizioni deterministiche:
+     * **Condizione A — Auto-Discovery (Rilevamento Concreto di Sistema)**: Se sulla macchina dell'utente esiste già la directory di configurazione di un'altra AI (es. `%USERPROFILE%\.codex\`, `%USERPROFILE%\.claude\`) oppure se nel workspace di progetto è presente un manifest ausiliario (`AGENTS.md`, `CLAUDE.md`);
+     * **Condizione B — On-Demand (Richiesta Esplicita dell'Utente)**: Se l'utente richiede espressamente di abilitare un secondo assistente durante l'onboarding o la sessione.
+   - *Se nessuna condizione si verifica*: Il sistema opera in **Modalità Singola AI (Lean Mode)**, gestendo unicamente l'AI Primaria prescelta (zero file orfani).
+
+2. **Momento 1 — Inizializzazione (Protocollo 1 — Onboarding)**:
    - Nel bootstrap di un nuovo workspace o macchina:
      - L'AI attiva si auto-rileva e si propone come Primaria;
-     - Su conferma dell'utente, genera i file master locali e, se richiesto, i manifest per i collaboratori ausiliari selezionati attingendo alla cartella `templates/collaboratori_ai/`.
-2. **Momento 2 — Aggiornamento Ecosistema (Protocollo 8 — Upgrade)**:
-   - Durante l'upgrade del Master Hub:
-     - L'AI Primaria scansiona la macchina dell'utente per individuare le cartelle dei client installati (`.codex`, `.claude`);
-     - Aggiorna atomicamente sia le proprie regole globali che quelle dei collaboratori rilevati, sincronizzando i riferimenti a nuovi protocolli e preservando le personalizzazioni utente.
-3. **Momento 3 — La Guardia Ausiliaria On-Demand (Proactive Multi-AI Health Check)**:
+     - Su esplicita richiesta dell'utente o rilevamento pregresso, genera i profili per i collaboratori ausiliari attingendo a `templates/collaboratori_ai/`.
+
+3. **Momento 2 — Aggiornamento Ecosistema (Protocollo 8 — Upgrade)**:
+   - Durante l'upgrade del Master Hub o l'esecuzione di `aggiorna_ecosistema.ps1`:
+     - L'assistente e gli script scansionano la macchina per verificare se esistono cartelle di client installati (`.codex`, `.claude`);
+     - *Solo per i client effettivamente rilevati o richiesti*, esegue il backup preventivo (`.bak`) e l'allineamento a cascata sia del router globale di macchina (Livello 0) che dei router locali di progetto (Livello 2), garantendo parità di versione e regole;
+     - Nessun file viene generato per AI assenti.
+
+4. **Momento 3 — La Guardia Ausiliaria On-Demand (Proactive Multi-AI Health Check)**:
    - Funziona come sentinella continua in qualsiasi sessione di lavoro:
      - *Se* in un progetto aperto l'AI Primaria rileva un file manifest di un collaboratore (es. `./AGENTS.md` o `./CLAUDE.md`), ma sulla macchina manca il corrispondente file globale (es. `%USERPROFILE%\.codex\AGENTS.md`);
      - *Oppure se* il file del collaboratore risulta obsoleto o disallineato rispetto alla versione corrente di ASTRALIS;
