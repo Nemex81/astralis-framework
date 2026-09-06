@@ -1,6 +1,6 @@
 # Standard Modding, Mod Loader e Gestione Runtime Congelati (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento definisce i criteri di stabilità, sicurezza e isolamento per il modding di videogiochi, runtime di terze parti e gestione dei fork open-source.

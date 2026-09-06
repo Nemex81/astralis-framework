@@ -1,6 +1,6 @@
 # Stile di Comunicazione, Ergonomia Vocale e Accessibilità Screen Reader (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento definisce gli standard di comunicazione, formattazione testuale e interazione verbale con lo screen reader NVDA.

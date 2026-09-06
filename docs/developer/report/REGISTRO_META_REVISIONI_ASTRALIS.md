@@ -6,6 +6,14 @@ Questo registro traccia le revisioni architetturali interne del framework a part
 
 ---
 
+## [META-REV-004] Neutralizzazione Ruoli Operativi, Allineamento Template e Discovery $env:ASTRALIS_HUB
+- **Data**: 2026-09-06
+- **Ambito**: Governance Distribuibile, Scripting Portabile, Multi-AI Symmetry
+- **Sintesi**: Neutralizzazione chirurgica dei ruoli operativi nei documenti pubblici (preservando l'attribuzione autoriale ad architettura simmetrica per Luca e Antigravity), introduzione del controllo reale su $env:ASTRALIS_HUB e user_preferences.json in esporta_starter_kit_zip.ps1, normalizzazione CRLF sugli script Windows PowerShell, allineamento di GEMINI_TEMPLATE.md e delle suite multi-AI ai 6 Cancelli dell'Inner Codex e ai flag di resilienza build.
+- **Stato**: Completato
+
+---
+
 ## [META-REV-003] Consolidamento Ecosistema da Audit Forense a 10 Assi
 - **Data**: 2026-09-06
 - **Ambito**: Architettura, Scripting Portabile, DRY Clean-Up & Version Coherence

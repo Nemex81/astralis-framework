@@ -27,15 +27,31 @@ param(
 function Find-AstralisMasterHub {
     $candidates = @()
     
-    # 1. Percorso relativo dallo script attivo
+    # 0. Variabile d'ambiente esplicita (Livello 1 Discovery)
+    if ($env:ASTRALIS_HUB -and (Test-Path $env:ASTRALIS_HUB)) {
+        $candidates += (Resolve-Path $env:ASTRALIS_HUB).Path
+    }
+
+    # 1. Preferenze utente / configurazione locale
+    $prefFile = Join-Path $env:USERPROFILE ".astralis\user_preferences.json"
+    if (Test-Path $prefFile) {
+        try {
+            $pref = Get-Content $prefFile -Raw | ConvertFrom-Json
+            if ($pref.HubPath -and (Test-Path $pref.HubPath)) {
+                $candidates += (Resolve-Path $pref.HubPath).Path
+            }
+        } catch {}
+    }
+
+    # 2. Percorso relativo dallo script attivo
     if ($PSScriptRoot) {
         $candidates += (Resolve-Path (Join-Path $PSScriptRoot "..") -ErrorAction SilentlyContinue).Path
     }
     
-    # 2. Percorso corrente
+    # 3. Percorso corrente
     $candidates += (Get-Location).Path
     
-    # 3. Percorsi standard conosciuti su OneDrive / UserProfile
+    # 4. Percorsi standard conosciuti su OneDrive / UserProfile
     if ($env:OneDrive) {
         $candidates += (Join-Path $env:OneDrive "Documenti\GitHub\astralis-framework")
     }

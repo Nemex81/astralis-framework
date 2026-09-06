@@ -1,6 +1,6 @@
 # Standard di Accessibilità da Tastiera e Screen Reader (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento stabilisce le regole e i requisiti tecnici inviolabili per garantire che qualsiasi software, interfaccia, applicazione o script sia al 100% utilizzabile da tastiera con screen reader NVDA.

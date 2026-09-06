@@ -1,6 +1,6 @@
 # Accessibilità nei Videogiochi, Navigazione e Gameplay Accessibile
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento raccoglie gli standard di game design e le soluzioni tecniche per rendere qualsiasi videogioco o mondo virtuale accessibile e fruibile al 100% da non vedenti.

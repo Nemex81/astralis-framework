@@ -1,6 +1,6 @@
 # Clean Architecture, Design Pattern & Disciplina di Versionamento AVF (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento definisce i principi di Clean Architecture, disaccoppiamento e la disciplina di versionamento semantico applicabili allo sviluppo software e alla documentazione in qualsiasi linguaggio o dominio.
@@ -201,7 +201,7 @@ Quando si lavora all'interno di un repository derivato da un progetto open-sourc
      - *Budget di Complessità*: Impatto algoritmico ($O(1)$, $O(N)$) o vincoli temporali (es. latenza $0\text{ ms}$);
      - *Invariante Anti-Regressione*: Proprietà di sistema che il contratto garantisce di non alterare.
 3. **Vantaggi di Governance & Testabilità**:
-   - I contratti fungono da base oggettiva per i test unitari a 0 ms (1 test per clausola contrattuale) e consentono a Luca e all'AI di validare matematicamente l'integrità del sistema prima e dopo il rilascio.
+   - I contratti fungono da base oggettiva per i test unitari a 0 ms (1 test per clausola contrattuale) e consentono allo sviluppatore e all'assistente AI di validare matematicamente l'integrità del sistema prima e dopo il rilascio.
 
 ---
 

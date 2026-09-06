@@ -1,6 +1,6 @@
 # Strategie di Testing, Isolamento Bug e Debug Sistemico (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento stabilisce le linee guida per la creazione di test automatici, la simulazione preventiva degli scenari, il troubleshooting sistemico delle anomalie e la sicurezza post-bonifica.
@@ -72,7 +72,7 @@ Questo documento stabilisce le linee guida per la creazione di test automatici, 
 ## 🛡️ 5. PROTOCOLLO DI NON-REGRESSIONE E ROLLBACK AUTOMATICO POST-BONIFICA (PROTOCOLLO 11)
 
 1. **La Doppia Barriera di Verifica Post-Pulizia**:
-   - Subito dopo l'applicazione di una bonifica di codice o asset approvata da Luca, l'assistente esegue tassativamente la sequenza di verifica:
+   - Subito dopo l'applicazione di una bonifica di codice o asset approvata dallo sviluppatore, l'assistente esegue tassativamente la sequenza di verifica:
      1. *Compilazione Pulita*: Esecuzione di `gradle build --no-daemon`, `dotnet build` o controllo di sintassi Python per intercettare errori di compilazione;
      2. *Suite Test Automatici*: Esecuzione dei test unitari e di integrazione (`pytest`, test di modulo) per verificare l'integrità dei flussi funzionali.
 2. **Clausola di Rollback Automatico Istantaneo**:

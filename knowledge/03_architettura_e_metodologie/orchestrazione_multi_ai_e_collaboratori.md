@@ -4,7 +4,7 @@
 # Ambito: Globale / Universale
 # Master Hub: <astralis-hub>
 
-Questo documento definisce l'architettura formale, le regole di coordinamento e i flussi operativi per consentire a molteplici intelligenze artificiali di collaborare in perfetta armonia sui progetti di Luca, garantendo zero conflitti di concorrenza, pieno rispetto dell'accessibilità NVDA e conformità ai 6 Canoni di Meta-Governance.
+Questo documento definisce l'architettura formale, le regole di coordinamento e i flussi operativi per consentire a molteplici intelligenze artificiali di collaborare in perfetta armonia sui progetti dell'utente, garantendo zero conflitti di concorrenza, pieno rispetto dell'accessibilità NVDA e conformità ai 6 Canoni di Meta-Governance.
 
 ---
 
@@ -13,9 +13,9 @@ Questo documento definisce l'architettura formale, le regole di coordinamento e 
 1. **Polimorfismo e Simmetria dei Ruoli**:
    - Il framework ASTRALIS è agnostico rispetto ai modelli AI.
    - In ogni sessione e progetto sono definiti due ruoli precisi e simmetrici:
-     * **AI Primaria (Lead Operativa)**: È l'assistente con cui l'utente sta interagendo in prima persona per sviluppare. Ha il mandato operativo di analizzare, compilare, eseguire comandi e applicare modifiche (sempre previo comando esplicito di Luca, Regola 0). Ha **autonomia al 100%** e può lavorare completamente da sola in qualsiasi sessione.
+     * **AI Primaria (Lead Operativa)**: È l'assistente con cui l'utente sta interagendo in prima persona per sviluppare. Ha il mandato operativo di analizzare, compilare, eseguire comandi e applicare modifiche (sempre previo comando esplicito dello sviluppatore, Regola 0). Ha **autonomia al 100%** e può lavorare completamente da sola in qualsiasi sessione.
      * **AI Ausiliaria / Collaboratore (Peer Reviewer & Dialettica)**: È l'assistente consultato per ottenere un secondo parere critico indipendente, sfidare scelte di design (Inner Codex esterno), effettuare revisioni formali del codice (PR Review) o svolgere sessioni di brainstorming algoritmico.
-   - **Invertibilità Completa**: Il modello di ruoli è universale e invertibile. Nel setup primario di Luca l'AI Primaria è Antigravity e l'AI Ausiliaria è GPT Codex; tuttavia, se Luca o un altro utente opera tramite Claude Code o Codex CLI, tali modelli assumono il ruolo di Primaria e Antigravity assume il ruolo ausiliario senza alterare le regole di sistema.
+   - **Invertibilità Completa**: Il modello di ruoli è universale e invertibile. Nel setup tipico l'AI Primaria può essere Antigravity e l'AI Ausiliaria un secondo modello (es. Claude o GPT Codex); tuttavia, se l'utente opera tramite Claude Code, Cursor o Codex CLI, tali modelli assumono il ruolo di Primaria e Antigravity assume il ruolo ausiliario senza alterare le regole di sistema.
 
 2. **Disciplina di Non-Concorrenza & Integrità File**:
    - Per prevenire race conditions, conflitti di merge e file lock:

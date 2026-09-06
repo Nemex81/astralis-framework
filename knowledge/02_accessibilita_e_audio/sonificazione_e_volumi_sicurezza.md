@@ -1,6 +1,6 @@
 # Sonificazione, Audio 3D Posizionale e Volumi di Sicurezza
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento definisce gli standard per la progettazione del paesaggio sonoro (soundscape), audio posizionale 3D e protezione acustica per utenti non vedenti.

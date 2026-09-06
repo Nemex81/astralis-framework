@@ -1,6 +1,6 @@
-# Catalogo dei Protocolli Operativi Ufficiali ASTRALIS (v3.0.0)
+# Catalogo dei Protocolli Operativi Ufficiali ASTRALIS (v3.0.1)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Master Hub ASTRALIS
 # Origine: ASTRALIS (Adaptive Standards for Testing, Rules, Accessibility & Level Integration Systems)
 
@@ -16,7 +16,7 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
 2. **Specializzazione Concreta Locale (Singolo Progetto & Livello 2)**:
    - Ogni progetto specializza i protocolli e le regole nel proprio file `GEMINI.md` e nelle schede `knowledge/` locali (il *"Come"* pratico: Mixin Java e Voxel per Minecraft, SKSE e Papyrus per Skyrim, wxPython e thread asincroni per Addon NVDA, pytest per Python, formattazione pura per Scrittura Creativa).
 3. **Esecuzione Quotidiana ad Alto Segnale**:
-   - Durante il lavoro quotidiano, Antigravity legge e applica le regole locali specializzate del progetto, minimizzando il consumo di token e garantendo precisione assoluta senza dover ricaricare la teoria generale.
+   - Durante il lavoro quotidiano, l'assistente AI primario legge e applica le regole locali specializzate del progetto, minimizzando il consumo di token e garantendo precisione assoluta senza dover ricaricare la teoria generale.
 4. **Ciclo di Auto-Apprendimento Continuo (Fase 4)**:
    - *Binario A (Locale)*: consolida le lezioni specifiche nelle schede `knowledge/` del progetto;
    - *Binario B (Globale)*: astrae i pattern trasversali arricchendo i moduli di `knowledge_globale/` nel Master Hub.
@@ -26,9 +26,9 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
 ## 🧠 IL PRINCIPIO DI RICONOSCIMENTO SEMANTICO FLESSIBILE & FEEDBACK DI AGGANCIO
 
 1. **Flessibilità Semantica**:
-   - Luca non è vincolato all'uso della parola "Protocollo". Qualsiasi formulazione naturale equivalente (es. *"studiamo la strategia"*, *"verifica sui 7 assi"*, *"passa in modalità telemetria"*, *"revisioniamo questo comportamento"*, *"chiudiamo il task"*, *"passiamo all'apprendimento"*, *"aggiorna il sistema di regole"*, *"configuriamo questa macchina"*, *"bonifichiamo il codice morto"*, *"fai l'auto-revisione avversariale"*) innesca all'istante il protocollo corrispondente.
+   - Lo sviluppatore non è vincolato all'uso della parola "Protocollo". Qualsiasi formulazione naturale equivalente (es. *"studiamo la strategia"*, *"verifica sui 7 assi"*, *"passa in modalità telemetria"*, *"revisioniamo questo comportamento"*, *"chiudiamo il task"*, *"passiamo all'apprendimento"*, *"aggiorna il sistema di regole"*, *"configuriamo questa macchina"*, *"bonifichiamo il codice morto"*, *"fai l'auto-revisione avversariale"*) innesca all'istante il protocollo corrispondente.
 2. **Dichiarazione Esplicita di Avvio**:
-   - Quando Antigravity riconosce un'intenzione operativa, apre la risposta dichiarando esplicitamente il protocollo agganciato per dare conferma immediata a sintesi vocale (es. `🛡️ [ASTRALIS] Avvio del Protocollo Pulizia...`).
+   - Quando l'assistente AI riconosce un'intenzione operativa, apre la risposta dichiarando esplicitamente il protocollo agganciato per dare conferma immediata a sintesi vocale (es. `🛡️ [ASTRALIS] Avvio del Protocollo Pulizia...`).
 
 ---
 
@@ -57,11 +57,11 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
        * **Integrazione & Interoperabilità di Runtime**: isolamento di framework esterni e prevenzione ClassCastException;
        * **Bonifica, Migrazione & Deprecazione** *(Zero-Debt Clean-up)*: eliminazione sicura con strategia a 5 barriere e rollback garantito.
      - **Collocazione**: La strategia nasce in `docs/strategie/attive/` con il template formale `STRATEGIA_COGNITIVA_TEMPLATE.md` a 5 sezioni con checklist di convergenza.
-  2. *Transizione e Congelamento Invarianti*: Quando Luca convalida la Strategia (*"strategia approvata"*), lo stato passa a `[CONVERTITA IN PIANO TECNICO]` e le invarianti diventano i vincoli del piano.
+  2. *Transizione e Congelamento Invarianti*: Quando lo sviluppatore convalida la Strategia (*"strategia approvata"*), lo stato passa a `[CONVERTITA IN PIANO TECNICO]` e le invarianti diventano i vincoli del piano.
   3. *Sotto-Fase 1A: Redazione Piano Tecnico Formale (I 7 Archetipi di Piano Tecnico)*:
      - Scelta deterministica dell'archetipo in base alla natura dell'intervento:
        * **Implementativo** *(Feature & New Modules)*: requisiti, contratti denominati D0..DN/S1..SN, architettura a layer e I18N;
-       * **Correttivo** *(Bug Fix & PRAPI Mirato)*: evidenza empirica Luca, Root Cause Analysis (RCA) senza pezze euristiche (Cancello 1), test di riproduzione isolato e patch chirurgica;
+       * **Correttivo** *(Bug Fix & PRAPI Mirato)*: evidenza empirica dello sviluppatore, Root Cause Analysis (RCA) senza pezze euristiche (Cancello 1), test di riproduzione isolato e patch chirurgica;
        * **Refactoring** *(Architectural Grooming)*: mappa code smell, disaccoppiamento interfacce/DIP e garanzia di **invarianza assoluta del comportamento esterno**;
        * **Bonifica & Pulizia** *(Dead Code Purge)*: rimozione codice/chiavi/asset morti con la Strategia a 5 Barriere di Sicurezza (Protocollo 11);
        * **Migrazione & Aggiornamento Stack** *(Runtime Upgrade)*: avanzamento versione runtime/motore, breaking changes e compatibilità binaria (Protocollo 8);
@@ -73,8 +73,8 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
      - **La Matrice a 3 Stati per NVDA**:
        * `- [ ] [DA AVVIARE]`: Attività pianificata ma non iniziata;
        * `- [/] [IMPLEMENTATO — IN ATTESA DI CONVALIDA]`: Spunta parziale. Il codice è scritto e compila con successo, ma **NON è ancora convalidato**;
-       * `- [x] [CONVALIDATO CON SUCCESSO]`: Spunta definitiva concessa **esclusivamente POST-CONVALIDA formale** (approvazione di Luca per la 1A, test suite 100% verde per la 1B, collaudo empirico in-game di Luca per la Fase 2);
-  5. *Stop Obbligatorio (Gating Semantico)*: Divieto assoluto di modifica autonoma prima del via libera esplicito di Luca.
+       * `- [x] [CONVALIDATO CON SUCCESSO]`: Spunta definitiva concessa **esclusivamente POST-CONVALIDA formale** (approvazione dello sviluppatore per la 1A, test suite 100% verde per la 1B, collaudo empirico per la Fase 2);
+  5. *Stop Obbligatorio (Gating Semantico)*: Divieto assoluto di modifica autonoma prima del via libera esplicito dello sviluppatore.
 
 
 ---
@@ -106,21 +106,21 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
 
 ### 4. PROTOCOLLO TELEMETRIA & MONITORAGGIO IN TEMPO REALE *(Live Logging & Denoising)*
 - **Comandi Trigger**: *"Passa in modalità telemetria"*, *"avvia protocollo telemetria"*, *"monitoriamo i log del collaudo"*, *"assistimi durante il test"*, *"apri la sessione di telemetria"*.
-- **Scopo**: Affiancare Luca come co-pilota analitico in tempo reale durante i collaudi (Fase 2), ispezionando i log dal vivo ed estraendo solo il segnale utile senza inondare la sintesi vocale.
+- **Scopo**: Affiancare lo sviluppatore come co-pilota analitico in tempo reale durante i collaudi (Fase 2), ispezionando i log dal vivo ed estraendo solo il segnale utile senza inondare la sintesi vocale o la console.
 - **Passaggi Operativi**:
   1. *Aggancio Dinamico delle Sorgenti*: Individuazione automatica dei file di log attivi (`latest.log`, `nvda.log`, output di console, dump);
   2. *Denoising & Filtro ad Alto Segnale per NVDA*: Isolamento istantaneo di warning, eccezioni, stacktrace, eventi tastiera e race conditions;
-  3. *Correlazione Causa-Effetto in Tempo Reale*: Riscontro immediato dell'azione eseguita da Luca rispetto all'evento registrato dal motore;
-  4. *Popolamento Proattivo del Registro Revisioni*: Appena Luca segnala un'anomalia o un dubbio, l'assistente la registra automaticamente nel Registro Revisioni locale del progetto con notifica vocale di 1 riga (`🛡️ [ASTRALIS] Registrata Rev X.Y`);
+  3. *Correlazione Causa-Effetto in Tempo Reale*: Riscontro immediato dell'azione eseguita dallo sviluppatore rispetto all'evento registrato dal motore;
+  4. *Popolamento Proattivo del Registro Revisioni*: Appena lo sviluppatore segnala un'anomalia o un dubbio, l'assistente la registra automaticamente nel Registro Revisioni locale del progetto con notifica vocale di 1 riga (`🛡️ [ASTRALIS] Registrata Rev X.Y`);
   5. *Generazione & Gestione del Report di Sessione (Pointer Hub Pattern)*:
      - All'avvio del collaudo, generazione/aggiornamento del file `docs/report/REPORT_SESSIONE_[TASK].md` con intestazione a 7 campi (`Autore`, `Revisori`, `Data e Ora`, `Stato dell'Implementazione`, `Obiettivi`, `Piani & Strategie Correlate`, `Breve Descrizione`);
-     - *Flusso Messaggi in Ordine Cronologico Inverso*: Ogni nuovo messaggio o scambio di telemetria (Luca, Antigravity, ChatGPT/Codex) viene inserito tassativamente in cima al flusso (`## 💬 Flusso Decisioni & Revisioni`);
+     - *Flusso Messaggi in Ordine Cronologico Inverso*: Ogni nuovo messaggio o scambio di telemetria (Sviluppatore, Assistente Primario, Copilota) viene inserito tassativamente in cima al flusso (`## 💬 Flusso Decisioni & Revisioni`);
      - *Standard Atomico ad Alto Segnale (4 Campi)*: Contesto/Sintomo ($\le 2$ righe), Causa Radice Concettuale, Approccio Risolutivo & Pattern, Puntatori Espliciti a sorgenti, test, log e piani (divieto assoluto di file bloat o dump integrali).
   6. *Ingestione & Proposta di Normalizzazione Post-Analisi (URCP In-Flight)*:
-     - Quando Luca o un collaboratore introduce nel progetto un report o un documento diagnostico proveniente dall'esterno (es. ChatGPT, tester, log grezzi) per richiederne l'analisi:
-       * *Fase Analitica*: Antigravity esamina a fondo il documento, svolge le verifiche tecniche necessarie e risponde nel merito alle domande di Luca;
-       * *Proposta di Normalizzazione Proattiva*: Contestualmente alle osservazioni tecniche, Antigravity presenta a Luca la proposta di conversione URCP (intestazione a 7 campi, ordine inverso ed eventuale compattazione dei log);
-       * *Applicazione su Consenso*: Con il via libera di Luca (*"procedi"*), il file viene immediatamente normalizzato e salvato nello standard ASTRALIS v2.7.1, garantendo leggibilità ottimale con NVDA e agganciabilità immediata al `REGISTRO_REVISIONI.md` fin dall'avvio dei lavori.
+     - Quando lo sviluppatore o un collaboratore introduce nel progetto un report o un documento diagnostico proveniente dall'esterno (es. copilota ausiliario, tester, log grezzi) per richiederne l'analisi:
+       * *Fase Analitica*: L'assistente esamina a fondo il documento, svolge le verifiche tecniche necessarie e risponde nel merito alle domande dello sviluppatore;
+       * *Proposta di Normalizzazione Proattiva*: Contestualmente alle osservazioni tecniche, L'assistente presenta allo sviluppatore la proposta di conversione URCP (intestazione a 7 campi, ordine inverso ed eventuale compattazione dei log);
+       * *Applicazione su Consenso*: Con il via libera dello sviluppatore (*"procedi"*), il file viene immediatamente normalizzato e salvato nello standard ASTRALIS v3.0.0, garantendo leggibilità ottimale con NVDA e agganciabilità immediata al `REGISTRO_REVISIONI.md` fin dall'avvio dei lavori.
 
 ---
 
@@ -131,7 +131,7 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
   1. *Acquisizione Voci dal Registro Revisioni & Collegamento Report*: Presa in carico delle voci `Rev X.Y` aperte durante la telemetria o il collaudo; ciascuna voce nel `REGISTRO_REVISIONI.md` punta direttamente al Report di Sessione attivo, che funge da Single Source of Truth per l'elenco dei file e dei log coinvolti;
   2. *Diagnosi & Formulazione Soluzione*: Isolamento della discrepanza tra intenzione ed esperienza reale e formulazione del fix chirurgico nel piano in `docs/piani/attivi/`;
   3. *Strategia dei Buffer di Rifinitura (Resequencing delle Revisioni)*: Nei piani di lavoro articolati in fasi sequenziali, le revisioni secondarie, i ritocchi di dettaglio e gli affinamenti non bloccanti emersi durante la produzione dei singoli blocchi non devono frammentare l'inerzia del lavoro primario: vengono formalmente accodati e differiti a valle del completamento del corpo centrale dell'opera, costituendo un buffer di rifinitura e armonizzazione dedicato che precede la revisione complessiva o il collaudo generale di rilascio;
-  4. *Stop Obbligatorio & Gating di Convalida (Regola 0)*: Presentazione del piano di affinamento a Luca e attesa approvazione;
+  4. *Stop Obbligatorio & Gating di Convalida (Regola 0)*: Presentazione del piano di affinamento allo sviluppatore e attesa approvazione;
   5. *Implementazione Chirurgica, Build & Re-Deploy (Sotto-Fase 1B / Fase 2)*: Modifica sorgenti, compilazione, deploy immediato nelle istanze e rilascio per il nuovo test mirato.
 
 ---
@@ -145,7 +145,7 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
      - **Per Fork di Terze Parti (Dual-Track)**: Aggiornamento della sezione `## [Unreleased]` in inglese nel `CHANGELOG.md` pubblico (zero version forcing per PR upstream) e contestuale registrazione della versione sovrana AVF nel diario in italiano `knowledge/NN_diario_modifiche_e_contributi_fork.md`;
   2. *Allineamento Trittico di Root & Cancello Bloccante AVF Pre-Export (Master Hub)*:
      - Aggiornamento contestuale ed atomico di `CHANGELOG.md`, `README.md` e `ISTRUZIONI_DI_AVVIO.md`;
-     - **Cancello Bloccante AVF Pre-Export**: Prima di generare o riesportare lo Starter Kit ZIP versionato (`ASTRALIS_Universal_Starter_Kit_vX.Y.Z.zip`), l'assistente DEVE fermarsi ed eseguire la rivalutazione formale dell'incremento di versione AVF (`V.A.R[.M]`), proponendo esplicitamente il numero di versione a Luca ed ottenendone la conferma prima del lancio dello script di export. È fatto divieto assoluto di riesportare archivi ZIP con versioni implicite o ereditate per inerzia;
+     - **Cancello Bloccante AVF Pre-Export**: Prima di generare o riesportare lo Starter Kit ZIP versionato (`ASTRALIS_Universal_Starter_Kit_vX.Y.Z.zip`), l'assistente DEVE fermarsi ed eseguire la rivalutazione formale dell'incremento di versione AVF (`V.A.R[.M]`), proponendo esplicitamente il numero di versione allo sviluppatore ed ottenendone la conferma prima del lancio dello script di export. È fatto divieto assoluto di riesportare archivi ZIP con versioni implicite o ereditate per inerzia;
   3. *Fase 3 (Chiusura Tecnica)*: Commit Git con Conventional Commits (`feat:`, `fix:`, `refactor:`, `docs:`, `chore:`);
   4. *Doppia Barriera di Backup*: Aggiornamento del backup stabile su OneDrive/Cloud **esclusivamente POST-CONVALIDA positiva dell'utente**;
   5. *Rilascio Atomico GitHub & Invalidazione Cache CDN (Per Repository Pubblici)*:
@@ -250,7 +250,7 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
     * *Oppure se* il file del collaboratore risulta disallineato rispetto alla versione corrente di ASTRALIS;
     * *Allora* emette una notifica proattiva a 1 riga per NVDA:
       > *"🛡️ [ASTRALIS] Rilevato collaboratore AI ([Nome AI]) con configurazione incompleta o disallineata. Vuoi che generi il profilo globale e armonizzi le direttive con 1 comando?"*
-  - Su conferma di Luca, genera atomicamente i profili mancanti attingendo da `templates/collaboratori_ai/`, garantendo simmetria e cooperazione sicura a zero attrito.
+  - Su conferma dello sviluppatore, genera atomicamente i profili mancanti attingendo da `templates/collaboratori_ai/`, garantendo simmetria e cooperazione sicura a zero attrito.
 
 ---
 
@@ -262,7 +262,7 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
      - Motivazione chiara dell'eliminazione;
      - Descrizione dettagliata dell'impatto sul contesto operativo;
      - Verifica dell'assenza di perdita dati (tutti i contenuti utili preservati altrove);
-     - **Richiesta e attesa di autorizzazione esplicita a Luca prima di procedere**;
+     - **Richiesta e attesa di autorizzazione esplicita allo sviluppatore prima di procedere**;
   2. *Per i Bug Ostici*:
      - Ricerca della causa radice (Root Cause Analysis, zero pezze provvisorie);
      - Test isolato di riproduzione;
@@ -280,7 +280,7 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
   2. *Barriera 2: Prospetto di Bonifica Lineare per NVDA (Dry-Run ad Alto Segnale)*:
      - Generazione del prospetto sequenziale numerato: `[ID]`, Percorso e riga, Elemento, Natura, Prova di non-uso, Livello di Rischio (`BASSO`, `MEDIO`, `ALTO`) e Azione Proposta (*Eliminazione* o *Quarantena*).
   3. *Barriera 3: Gating Semantico & Scelta Granulare dell'Utente (Regola 0)*:
-     - Nessuna modifica autonoma. Luca può accettare tutto, escludere ID specifici o richiedere la modalità conservativa.
+     - Nessuna modifica autonoma. Lo sviluppatore può accettare tutto, escludere ID specifici o richiedere la modalità conservativa.
   4. *Barriera 4: Quarantena di Sicurezza Reversibile & Snapshot (Zero Data Loss)*:
      - Creazione di snapshot preventivo locale (`docs/quarantena_[timestamp]/` o branch temporaneo);
      - Nei progetti di Scrittura Creativa vige il **Divieto Assoluto di Cancellazione**: le bozze o note dismesse vengono spostate in `archivio_bozze/`.
@@ -313,7 +313,7 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
       - È fatto divieto assoluto di accogliere o proporre inserimenti di spiegazioni estese nei file di ingresso master (`GEMINI.md`).
       - *Se* una nuova regola, routine o spiegazione richiede più di 4 righe -> *Allora* l'assistente DEVE rifiutare l'innesto diretto nel router, incapsulare il contenuto in una scheda modulare dedicata (`knowledge/`) e inserire nel router unicamente un puntatore ipertestuale conforme ai 6 Canoni.
 - **Integrazione Obbligatoria nella Sotto-Fase 1A**:
-  - In ogni Piano Tecnico Formale, prima della presentazione a Luca, Antigravity esegue un audit preventivo esplicito a 6 voci dichiarando la piena conformità ai 6 Cancelli Inviolabili.
+  - In ogni Piano Tecnico Formale, prima della presentazione allo sviluppatore, l'assistente AI esegue un audit preventivo esplicito a 6 voci dichiarando la piena conformità ai 6 Cancelli Inviolabili.
 
 ---
 
@@ -334,13 +334,13 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
 3. **Ciclo di Vita Automatizzato delle Revisioni**:
    - *Fase A (Rilevamento / Fase 2)*: L'anomalia emersa in telemetria viene registrata in `docs/report/REGISTRO_REVISIONI.md` (`🛡️ [ASTRALIS] Registrata Rev X.Y`);
    - *Fase B (Affinamento / PRAPI Protocollo 5)*: La voce viene lavorata e marcata `[IN LAVORAZIONE]`;
-   - *Fase C (Chiusura Tecnica / Fase 3 o Fase 4)*: A collaudo positivo confermato da Luca, la voce viene marcata `[COLLAUDATA CON SUCCESSO]` e **migrata automaticamente dal registro attivo a `docs/report/ARCHIVIO_REVISIONI.md`**, lasciando il registro attivo sempre pulito.
+   - *Fase C (Chiusura Tecnica / Fase 3 o Fase 4)*: A collaudo positivo confermato dallo sviluppatore, la voce viene marcata `[COLLAUDATA CON SUCCESSO]` e **migrata automaticamente dal registro attivo a `docs/report/ARCHIVIO_REVISIONI.md`**, lasciando il registro attivo sempre pulito.
 
 4. **Anatomia Standard di Ogni Voce**:
    ```markdown
    ### 🟡 Rev [ID] — [Titolo Sintetico]
    - **Stato**: `[APERTA / IN TELEMETRIA]` | `[IN LAVORAZIONE]` | `[COLLAUDATA CON SUCCESSO]`
-   - **Problema Riscontrato (Esperienza Luca)**: [Sintomo e discrepanza]
+   - **Problema Riscontrato (Esperienza Sviluppatore)**: [Sintomo e discrepanza]
    - **Evidenza Telemetrica / Log**: [Eventuale riga di log o eccezione]
    - **Causa Radice**: [Perché si è verificato il comportamento]
    - **Soluzione di Affinamento**: [Cosa faremo nel PRAPI]

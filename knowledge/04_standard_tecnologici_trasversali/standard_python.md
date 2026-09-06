@@ -1,6 +1,6 @@
 # Standard di Sviluppo Python, Virtual Environment e Tipizzazione
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento definisce le convenzioni, lo stile e le linee guida per i progetti sviluppati in linguaggio Python.

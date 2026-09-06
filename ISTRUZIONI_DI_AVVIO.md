@@ -1,9 +1,9 @@
-# 🚀 ASTRALIS STARTER KIT — ISTRUZIONI RAPIDE DI AVVIO (v3.0.0)
+# 🚀 ASTRALIS STARTER KIT — ISTRUZIONI RAPIDE DI AVVIO (v3.0.1)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
 # Framework: ASTRALIS (Adaptive Standards for Testing, Rules, Accessibility & Level Integration Systems)
 # Master Hub: <astralis-hub>
 
-Benvenuto in **ASTRALIS v3.0.0**, l'ecosistema di governance a 3 livelli, 12 protocolli operativi, disciplina di versionamento AVF e accessibilità universale di Luca & Antigravity!
+Benvenuto in **ASTRALIS v3.0.1**, l'ecosistema di governance a 3 livelli, 12 protocolli operativi, disciplina di versionamento AVF e accessibilità universale di Luca & Antigravity!
 
 Questo pacchetto ti consente sia di configurare da zero il tuo ambiente in meno di 1 minuto (Protocollo Onboarding), sia di aggiornare un'installazione preesistente preservando al 100% tutte le tue personalizzazioni con l'**Aggiornamento Integrativo a Cascata** (Protocollo Aggiornamento).
 
@@ -20,15 +20,15 @@ Segui questi 3 semplici passi se usi ASTRALIS per la prima volta:
 1. **PASSO 1: Posiziona questa cartella**  
    Copia o clona l'intera cartella `astralis-framework` all'interno della cartella in cui tieni i tuoi progetti (ad esempio in `C:\Users\TuoNome\Progetti\` oppure nella tua cartella di sviluppo).
 
-2. **PASSO 2: Apri Antigravity**  
-   Apri il tuo editor / client di sviluppo con **Antigravity** posizionandoti nella cartella dei tuoi progetti.
+2. **PASSO 2: Apri il tuo assistente AI**  
+   Apri il tuo editor o client di sviluppo con l'assistente AI prescelto (Google Antigravity, Claude Code, OpenAI Codex, o altro) posizionandoti nella cartella dei tuoi progetti.
 
 3. **PASSO 3: Avvia l'intervista guidata**  
    Scrivi semplicemente in chat:  
    > *"Avvia Protocollo Onboarding"*  
    *(Oppure: "Ciao, vorrei configurare l'ambiente di lavoro con ASTRALIS!").*
 
-Antigravity ti farà 3 veloci domande (nome, se usi screen reader NVDA o monitor, e preferenze di accessibilità), configurando automaticamente il Genoma Globale (Livello 0), l'albero documentale `docs/` e inizializzando i nuovi progetti con la baseline AVF (`v1.0.0` o `v0.1.0`), `CHANGELOG.md` e `REGISTRO_REVISIONI.md`.
+L'assistente AI ti farà 3 veloci domande (nome, se usi screen reader NVDA o monitor, e preferenze di accessibilità), configurando automaticamente il Genoma Globale (Livello 0), l'albero documentale `docs/` e inizializzando i nuovi progetti con la baseline AVF (`v1.0.0` o `v0.1.0`), `CHANGELOG.md` e `REGISTRO_REVISIONI.md`.
 
 ---
 
@@ -39,15 +39,15 @@ Segui questi 3 semplici passi se hai già installato in passato una versione pre
 1. **PASSO 1: Sostituisci la cartella del Master Hub**  
    Estrai lo Starter Kit ZIP aggiornato (`ASTRALIS_Universal_Starter_Kit.zip`) e sovrascrivi la cartella `astralis-framework` all'interno dei tuoi progetti.
 
-2. **PASSO 2: Apri Antigravity**  
-   Apri Antigravity nella tua cartella progetti.
+2. **PASSO 2: Apri il tuo assistente AI**  
+   Apri il tuo assistente AI nella cartella progetti.
 
 3. **PASSO 3: Avvia l'aggiornamento automatico**  
    Scrivi semplicemente in chat:  
    > *"Avvia Protocollo Aggiornamento"*  
    *(Oppure: "Aggiorna ASTRALIS a questa versione").*
 
-Antigravity eseguirà:
+L'assistente AI eseguirà:
 - **Diff Semantico & Backup Preventivo Globale**: Rileva le tue regole/consuetudini custom e crea copie di sicurezza timestampate (`GEMINI_[timestamp].bak` e `knowledge_[timestamp].bak`).
 - **Aggiornamento Integrativo Globale (Smart Merge)**: Fonde il nuovo Genoma preservando nell'Isola Protetta Utente tutte le tue personalizzazioni e fondendo a sezioni i moduli di `knowledge/` (o `knowledge_globale/` nell'hub locale).
 - **Scansione a Cascata del Workspace (Triage)**: Identifica e classifica i progetti in `[DA AGGIORNARE IN MODO INTEGRATIVO]`, `[GIÀ ALLINEATO]` e `[CANDIDATO ONBOARDING]`.

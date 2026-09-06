@@ -1,6 +1,6 @@
 # Standard per Addon NVDA, Thread Asincroni e GUI wxPython
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 
 Questo documento stabilisce le regole per la creazione di addon, plugin per screen reader NVDA e interfacce grafiche con wxPython.

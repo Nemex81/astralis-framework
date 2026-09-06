@@ -4,6 +4,23 @@
 
 Tutte le modifiche rilevanti, i rilasci e le evoluzioni del framework universale **ASTRALIS** sono tracciate in questo documento.
 
+## 🚀 [v3.0.1] — 2026-09-06 (Universal Role Neutrality, Script Hub Discovery & Multi-AI Alignment)
+
+### 🌟 Perfezionamento Distributivo, Neutralità dei Ruoli & Scripting Portabile
+- **Neutralizzazione dei Ruoli Operativi nei Documenti Pubblici**:
+  - Separazione netta tra *Riconoscimento Autoriale Morale/Legale* (preservato al 100% per Luca come autore/architetto e Antigravity come copilota originario in README, licenza e metadati) e *Ruoli Operativi nei Moduli*:
+    * Sostituite nei testi di flusso operativo tutte le menzioni rigide con ruoli agnostici (`[Sviluppatore]`, `[AI Pair Programmer]`, `[Utente]`);
+    * Neutralizzato l'header `Target AI` in tutte le 15 schede `knowledge/` (`Target AI: [AI Pair Programmer / Assistente AI]`);
+    * Istruzioni di avvio e prompt di onboarding resi 100% agnostici per supportare nativamente Google Antigravity, Claude Code, OpenAI Codex, Cursor o qualsiasi AI assistente.
+- **Implementazione Esecutiva dell'Algoritmo Dinamico di Discovery Hub**:
+  - Aggiornato `scripts/esporta_starter_kit_zip.ps1` per consultare esplicitamente la variabile d'ambiente `$env:ASTRALIS_HUB` e il file di configurazione locale `user_preferences.json`, allineando l'implementazione esecutiva alla documentazione formale.
+- **Normalizzazione Fine Riga & Igiene Codifica**:
+  - Normalizzati tutti gli script PowerShell (`.ps1`) con terminazione CRLF per la massima compatibilità con Windows PowerShell 5.1 e PowerShell 7.
+- **Allineamento Template di Progetto & Resilienza Build**:
+  - Sincronizzato `templates/GEMINI_TEMPLATE.md` a v3.0.0 con l'integrazione del Cancello 6 Token Budget, Rete Pointer DRY e flag di resilienza build (`--no-daemon --no-watch-fs`).
+
+---
+
 ## 🚀 [v3.0.0] — 2026-09-06 (Universal Open Source Release, Convergenza Modulare & Triplo Context Switcher)
 
 ### 🌟 Novità di Sistema, Rilascio Open Source & Architettura Universale

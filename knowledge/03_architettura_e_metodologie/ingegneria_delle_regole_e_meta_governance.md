@@ -1,6 +1,6 @@
 # Ingegneria delle Regole e Meta-Governance (ASTRALIS Canon Crafting)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Ambito: Globale / Universale
 # Master Hub: <astralis-hub>
 

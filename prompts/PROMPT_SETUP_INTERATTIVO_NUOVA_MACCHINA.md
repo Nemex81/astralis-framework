@@ -1,6 +1,6 @@
 # Prompt Master: Setup Interattivo & Bootstrap Nuova Macchina (ASTRALIS v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
-# Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
+# Target AI: [AI Pair Programmer / Assistente AI]
 # Framework: ASTRALIS (Adaptive Standards for Testing, Rules, Accessibility & Level Integration Systems)
 # Master Hub: <astralis-hub>
 
