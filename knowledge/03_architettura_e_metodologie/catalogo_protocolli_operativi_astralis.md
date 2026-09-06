@@ -147,14 +147,19 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
      - Aggiornamento contestuale ed atomico di `CHANGELOG.md`, `README.md` e `ISTRUZIONI_DI_AVVIO.md`;
      - **Cancello Bloccante AVF Pre-Export**: Prima di generare o riesportare lo Starter Kit ZIP versionato (`ASTRALIS_Universal_Starter_Kit_vX.Y.Z.zip`), l'assistente DEVE fermarsi ed eseguire la rivalutazione formale dell'incremento di versione AVF (`V.A.R[.M]`), proponendo esplicitamente il numero di versione a Luca ed ottenendone la conferma prima del lancio dello script di export. È fatto divieto assoluto di riesportare archivi ZIP con versioni implicite o ereditate per inerzia;
   3. *Fase 3 (Chiusura Tecnica)*: Commit Git con Conventional Commits (`feat:`, `fix:`, `refactor:`, `docs:`, `chore:`);
-  4. *Doppia Barriera di Backup*: Aggiornamento del backup stabile su OneDrive/Cloud **esclusivamente POST-CONVALIDA positiva di Luca**;
-  5. *Living Documentation, Migrazione RRU & Archiviazione Automatica a Zero Residui*:
+  4. *Doppia Barriera di Backup*: Aggiornamento del backup stabile su OneDrive/Cloud **esclusivamente POST-CONVALIDA positiva dell'utente**;
+  5. *Rilascio Atomico GitHub & Invalidazione Cache CDN (Per Repository Pubblici)*:
+     - Nei repository distribuiti tramite GitHub Releases, se un tag o una release subisce consolidamenti post-audit prima della diffusione pubblica, è fatto divieto di affidarsi al solo force-push del tag Git (la CDN di GitHub mantiene in cache i vecchi archivi automatici `.zip` e `.tar.gz` del codice sorgente);
+     - Eseguire sempre la procedura di rigenerazione atomica a due stadi:
+       * 1. Cancellazione release: `gh release delete <tag> --yes` (invalida la cache CDN e pulisce il database release);
+       * 2. Ricreazione release: `gh release create <tag> --title "..." --notes-file <path>` legata deterministicamente al commit consolidato;
+  6. *Living Documentation, Migrazione RRU & Archiviazione Automatica a Zero Residui*:
      - Aggiornamento delle schede in `knowledge/`;
      - **Archiviazione del Piano Tecnico**: Spostamento del piano completato da `docs/piani/attivi/` a `docs/piani/completati/`;
      - **Archiviazione della Strategia Cognitiva**: Spostamento della strategia validata da `docs/strategie/attive/` a `docs/strategie/archiviate/` con stato `[ARCHIVIATA CON SUCCESSO]`;
      - **Migrazione RRU**: Trasferimento delle revisioni collaudate da `docs/report/REGISTRO_REVISIONI.md` ad `ARCHIVIO_REVISIONI.md`;
      - **Archiviazione Automatica del Report**: Spostamento automatico di `docs/report/REPORT_SESSIONE_[TASK].md` in `docs/report/archivio/REPORT_SESSIONE_[TASK].md`, aggiornando deterministicamente tutti i puntatori incrociati ai path di archivio (zero link rotti e zero documenti orfani);
-  6. *Domanda Ponte Obbligatoria*: L'assistente **NON si congeda mai a vuoto**, ma chiude tassativamente con la domanda di transizione:
+  7. *Domanda Ponte Obbligatoria*: L'assistente **NON si congeda mai a vuoto**, ma chiude tassativamente con la domanda di transizione:
      > *"Vuoi che avviamo ora la sessione formale di Auto-Apprendimento (Fase 4) per elaborare la bozza dettagliata delle regole e aggiornare le schede di conoscenza e governance?"*
      - *Pre-auto-learning relevance check* – Analisi silenziosa della sessione corrente; se non emergono nuove conoscenze, il prompt di auto-apprendimento viene omesso e viene comunicato “Nessuna rilevanza o lezione appresa in questa sessione di lavoro – salto l’auto-apprendimento”. Altrimenti, il prompt è mostrato con una breve sintesi dei punti rilevanti.
 

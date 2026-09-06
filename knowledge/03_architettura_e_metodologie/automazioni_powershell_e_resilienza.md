@@ -51,16 +51,16 @@ Questo documento definisce gli standard per la creazione di script di sistema, t
 
 ---
 
-## 🏛️ 5. PATTERN COMPONENT-BASED DISCOVERY & RELEASES HUB VERSIONATI
+## 🏛️ 5. PATTERN COMPONENT-BASED DISCOVERY DUAL & RELEASES HUB VERSIONATI
 
-1. **Discovery Deterministico a Marker Strutturali Interni**:
+1. **Discovery Deterministico a Marker Strutturali Interni (Supporto Duale)**:
    - Negli script che interagiscono con il Master Hub o con repository di configurazione globale, non assumere mai una posizione fissa sul filesystem;
-   - Verificare la compresenza dei marker distintivi del sistema (`knowledge_globale/`, `prompts/`, `templates/`, `scripts/`, `CHANGELOG.md`). Se tutti i marker sono presenti, la radice del Master Hub è validata con certezza al 100%.
+   - *Principio di Discovery Duale*: La libreria delle schede può essere denominata `knowledge/` (nel repository pubblico distribuibile) o `knowledge_globale/` (nel Master Hub locale). Gli script devono verificare che sia presente `(Test-Path "knowledge") -or (Test-Path "knowledge_globale")` insieme agli altri marker (`prompts/`, `templates/`, `scripts/`, `CHANGELOG.md`). Se tutti i marker sono presenti, la radice del sistema è validata con certezza al 100%.
 2. **Istituzione della Cartella `releases/` & Zero Desktop Clutter**:
    - Tutti gli archivi compressi, pacchetti di distribuzione o Starter Kit generati devono risiedere nella cartella dedicata `releases/` all'interno del Master Hub;
    - Divieto assoluto di rilasciare archivi di sistema sul Desktop dell'utente.
 3. **Generazione Duale & Versioning Immutabile**:
-   - Ogni rilascio genera un archivio immutabile con SemVer esplicito (`{Nome}_v{VERSIONE}.zip`, es. `ASTRALIS_Universal_Starter_Kit_v2.6.0.zip`);
+   - Ogni rilascio genera un archivio immutabile con SemVer esplicito (`{Nome}_v{VERSIONE}.zip`, es. `ASTRALIS_Universal_Starter_Kit_v3.0.0.zip`);
    - Mantenere parallelamente aggiornato un puntatore fisso `{Nome}_latest.zip` per facilitare il bootstrap e la condivisione rapida;
    - Escludere tassativamente la cartella `releases/` durante la scansione ricorsiva per impedire annidamenti di ZIP storici dentro i nuovi archivi.
 4. **Flessibilità delle Release Personalizzate dell'Utente**:
@@ -104,3 +104,14 @@ Questo documento definisce gli standard per la creazione di script di sistema, t
 
 3. **Resilienza ai Lock Cloud**:
    - Nei processi di build (Gradle, Maven, PyInstaller), passare sempre flag anti-demone (`--no-daemon`) e usare directory temporanee `$env:TEMP` per prevenire lock di file da parte del client di sincronizzazione OneDrive/Google Drive.
+
+---
+
+## 💻 7. IGIENE DEI CARATTERI SPECIALI & CODEPAGE CONSOLE IN POWERSHELL
+
+1. **La Diagnostica del Lock da Codepage (Windows PowerShell 5.1 vs Core 7)**:
+   - Su console Windows tradizionali con codepage legacy (`chcp 850` / `Windows-1252`), caratteri tipografici multibyte non-ASCII (come trattini lunghi em-dash `—`, virgolette curve o simboli grafici complessi) nelle stringhe dei comandi `Write-Host` o nei commenti possono provocare fallimenti di parsing immediati (`ParseException: AmpersandNotAllowed` o terminatori di stringa mancanti);
+2. **Standard di Scrittura Resiliente per Script di Sistema**:
+   - *Separatori e Titoli*: Usare esclusivamente caratteri ASCII standard per i separatori di testo (es. `--` o `==`, mai trattini tipografici lunghi);
+   - *Caratteri Riservati PowerShell*: Qualsiasi `&` presente in stringhe di output deve essere opportunamente racchiusa tra virgolette o passata in stringhe letterali (`'@ ... '@`);
+   - *Igiene File UTF-8*: Tutti gli script `.ps1` devono essere codificati in UTF-8 senza BOM (`New-Object System.Text.UTF8Encoding($false)`) per garantire massima portabilità cross-platform.
