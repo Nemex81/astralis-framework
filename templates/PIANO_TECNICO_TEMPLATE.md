@@ -9,7 +9,7 @@
   * Strategia Logico-Cognitiva: [`STRATEGIA_COLLEGATA.md`](./...) [se applicabile / Hotfix Diretto]
   * Piano Collegato / Predecessore: [`PIANO_COLLEGATO.md`](./...)
   * Report di Sessione / Telemetria: [`REPORT_SESSIONE_COLLEGATO.md`](./...)
-- **Conformità ai 5 Cancelli (Protocollo 12):** [Audit preventivo sui 5 Cancelli Inviolabili superato]
+- **Conformità ai 6 Cancelli (Protocollo 12):** [Audit preventivo sui 6 Cancelli Inviolabili superato]
 
 ---
 
@@ -18,24 +18,24 @@
 > **Regola Aurea di Avanzamento**:
 > - `- [ ] [DA AVVIARE]`: Attività pianificata ma non ancora iniziata.
 > - `- [/] [IMPLEMENTATO — IN ATTESA DI CONVALIDA]`: Codice scritto o intervento completato, ma in attesa di test o collaudo formale (spunta parziale).
-> - `- [x] [CONVALIDATO CON SUCCESSO]`: Spunta definitiva concessa **esclusivamente POST-CONVALIDA** (approvazione di Luca per la 1A, test suite 100% verde per la 1B, collaudo pratico in-game di Luca per la Fase 2).
+> - `- [x] [CONVALIDATO CON SUCCESSO]`: Spunta definitiva concessa **esclusivamente POST-CONVALIDA** (approvazione dello sviluppatore per la 1A, test suite 100% verde per la 1B, collaudo pratico per la Fase 2).
 
 - [ ] **Sotto-Fase 1A — Progettazione, Named Contracts & Validazione (Stop Obbligatorio)**
   - [ ] Redazione requisiti e anatomia del problema / opportunità [DA AVVIARE]
   - [ ] Scomposizione in Named Contracts (D0..DN, S1..SN) [DA AVVIARE]
-  - [ ] Audit Preventivo dei 5 Cancelli Inviolabili (Protocollo 12) [DA AVVIARE]
+  - [ ] Audit Preventivo dei 6 Cancelli Inviolabili (Protocollo 12) [DA AVVIARE]
   - [ ] Matrice di simulazione scenari a 3 livelli (Happy Path, Alternative, Corner Cases) [DA AVVIARE]
-  - [ ] **Gating di Approvazione**: Stop formale e via libera esplicito di Luca (*"procedi"*) [IN ATTESA APPROVAZIONE LUCA]
+  - [ ] **Gating di Approvazione**: Stop formale e via libera esplicito dell'utente (*"procedi"*) [IN ATTESA APPROVAZIONE]
 - [ ] **Sotto-Fase 1B — Esecuzione Tecnica, Codice & Test Seams Headless**
   - [ ] Intervento chirurgico sui file sorgente core (Contratti S1..SN) [DA AVVIARE]
   - [ ] Implementazione test seams package-private a 0 ms (Cancello 5) [DA AVVIARE]
   - [ ] Compilazione pulita con flag `--no-daemon` ed esecuzione suite test automatici [DA AVVIARE]
   - [ ] **Convalida Tecnica**: 100% test verdi e assenza di regressioni binarie [IN ATTESA TEST AUTOMATICI]
 - [ ] **Fase 2 — Deploy Proattivo, Telemetria Live & Collaudo Pratico**
-  - [ ] Deploy automatico dell'artefatto compilato nell'istanza attiva di gioco / runtime [DA AVVIARE]
+  - [ ] Deploy automatico dell'artefatto compilato nell'istanza attiva di runtime [DA AVVIARE]
   - [ ] Apertura sessione di telemetria e collegamento al `docs/report/REPORT_SESSIONE_[TASK].md` [DA AVVIARE]
-  - [ ] Collaudo pratico da tastiera di Luca con NVDA sul salvataggio reale [DA AVVIARE]
-  - [ ] **Convalida Empirica**: Esito positivo a pieni voti confermato da Luca [IN ATTESA COLLAUDO LUCA]
+  - [ ] Collaudo pratico da tastiera con NVDA sul profilo/ambiente reale [DA AVVIARE]
+  - [ ] **Convalida Empirica**: Esito positivo a pieni voti confermato dall'utente [IN ATTESA COLLAUDO]
 - [ ] **Fase 3 — Chiusura Tecnica, AVF & Archiviazione a Zero Residui**
   - [ ] Calcolo deterministico nuova versione AVF (`V.A.R[.M]`) e aggiornamento note di rilascio [DA AVVIARE]
   - [ ] Migrazione del presente piano in `docs/piani/completati/` [DA AVVIARE]
@@ -69,13 +69,14 @@
 
 ---
 
-## ⚖️ 3. Audit Preventivo dei 5 Cancelli Inviolabili (Protocollo 12)
+## ⚖️ 3. Audit Preventivo dei 6 Cancelli Inviolabili (Protocollo 12)
 
 - [ ] **Cancello 1 — Rifiuto Patching Euristico**: La soluzione affronta l'invariante logico/topologico reale o maschera il sintomo alterando budget, tick, delay o costanti arbitrarie?
-- [ ] **Cancello 2 — Purezza dell'Intento Fisico**: Nei sistemi ibridi/cooperativi, l'intento dell'utente umano è ancorato all'hardware puro (polling periferica/GLFW) o legge stati simulati da guardie logiche?
-- [ ] **Cancello 3 — Integrità Hitbox & Volumetria Continua**: L'analisi considera la bounding box 3D continua ($0.6 \times 1.8\text{ m}$), clearance verticale (occhi/testa) e forme di collisione sottili, evitando riduzioni a punti discreti?
+- [ ] **Cancello 2 — Purezza dell'Intento Fisico**: Nei sistemi ibridi/cooperativi, l'intento dell'utente umano è ancorato all'hardware puro (polling periferica/GLFW) o legge stati simulati da guardie logiche? *(Specifico per Game Dev / Input Fisico; N/A per altri domini)*
+- [ ] **Cancello 3 — Integrità Hitbox & Volumetria Continua**: L'analisi considera la bounding box 3D continua ($0.6 \times 1.8\text{ m}$), clearance verticale (occhi/testa) e forme di collisione sottili, evitando riduzioni a punti discreti? *(Specifico per Game Dev 3D; N/A per altri domini)*
 - [ ] **Cancello 4 — Contratti Denominati & Chiusi**: Le modifiche sono strutturate in contratti atomici e numerati (D0..DN, S1..SN) con precondizioni, postcondizioni, complessità e invarianti esplicite?
 - [ ] **Cancello 5 — Determinismo Headless & Time-Seams a 0 ms**: Tutti i componenti a tempo (TTL, cooldown, debouncing) espongono time-seam package-private per test automatici istantanei senza `Thread.sleep`?
+- [ ] **Cancello 6 — Custode Critico del Budget Token & Anti-Bloat Normativo**: La proposta rispetta i limiti di token budget (Canone 1, router $\le 250$ righe, zero duplicazioni testuali) e non introduce ridondanze normative?
 
 ---
 

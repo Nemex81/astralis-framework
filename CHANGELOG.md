@@ -32,7 +32,13 @@ Tutte le modifiche rilevanti, i rilasci e le evoluzioni del framework universale
 - **Standardizzazione dei Collegamenti (Canone 3 Universale)**:
   - Conversione integrale dei percorsi locali in link relativi Markdown standard portabili su GitHub Web, browser ed editor locali.
 - **Suite Template Multi-AI & Manifest Polimorfici (`templates/`)**:
-  - Template pronti all'uso per OpenAI/GPT Codex (`AGENTS.md`), Anthropic Claude (`CLAUDE.md`), Google Antigravity/Gemini (`GEMINI.md`) e Custom AI.
+  - Template pronti all'uso per OpenAI/GPT Codex (`AGENTS_GPT_TEMPLATE.md`), Anthropic Claude (`CLAUDE.md`), Google Antigravity/Gemini (`GEMINI.md`) e Custom AI.
+- **Audit Forense a 10 Assi & Consolidamento Ecosistema**:
+  - Allineamento universale della versione a v3.0.0 su tutti i 69 file e moduli.
+  - Risoluzione delle duplicazioni e conformità al Canone 3 DRY (spostamento piano tecnico di rilascio completato in `docs/developer/piani/completati/`, trasformazione delle copie in puntatori DRY).
+  - Resilienza e portabilità degli script PowerShell con supporto bidirezionale dei marker (`knowledge` e `knowledge_globale`), compatibilità console e gestione try/catch.
+  - Neutralizzazione dei residui operativi rigidi a favore di placeholder universali (`[NOME SVILUPPATORE]`, `user_preferences.md`).
+  - Integrazione completa del Cancello 6 (Budget Token & Anti-Bloat Normativo) nelle checklist operative dei piani tecnici e delle strategie cognitive.
 
 ---
 

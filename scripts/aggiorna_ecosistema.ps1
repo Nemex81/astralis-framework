@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS
-    Script di supporto, verifica e audit per l'aggiornamento ASTRALIS (v2.6.3).
+    Script di supporto, verifica e audit per l'aggiornamento ASTRALIS (v3.0.0).
 .DESCRIPTION
-    Verifica l'integrita dei file radice, dei moduli, degli 11 protocolli, dei template e del Trittico Inviolabile (Version Coherence Guard),
-    crea un backup preventivo del Genoma Globale e di knowledge_globale, rileva eventuali regole custom per l'Aggiornamento Integrativo,
+    Verifica l'integrita dei file radice, dei moduli, dei 12 protocolli, dei template e del Trittico Inviolabile (Version Coherence Guard),
+    crea un backup preventivo del Genoma Globale e della knowledge base, rileva eventuali regole custom per l'Aggiornamento Integrativo,
     scansiona i progetti per l'allineamento a cascata ed esegue l'audit post-aggiornamento.
 .PARAMETER BackupDir
     Cartella opzionale di destinazione per i backup. Di default usa la cartella di configurazione dell'utente.
@@ -13,7 +13,7 @@ param(
 )
 
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host " ASTRALIS GOVERNANCE - VERIFICA INTEGRITA E AGGIORNAMENTO (v2.6.3)" -ForegroundColor Cyan
+Write-Host " ASTRALIS GOVERNANCE - VERIFICA INTEGRITA E AGGIORNAMENTO (v3.0.0)" -ForegroundColor Cyan
 Write-Host " Autore: Luca (Senior Developer) & Antigravity" -ForegroundColor Yellow
 Write-Host "============================================================" -ForegroundColor Cyan
 
@@ -22,19 +22,29 @@ Write-Host "[*] Radice Master Hub ASTRALIS: $hubRoot" -ForegroundColor Gray
 
 # 1. Verifica e Self-Healing dei File di Radice, Protocolli e Template
 Write-Host "`n--- FASE 1: Verifica Integrita File di Radice, Protocolli e Template ---" -ForegroundColor Cyan
+
+# Risoluzione dinamica dei percorsi chiave
+$isRepoFramework = Test-Path (Join-Path $hubRoot "knowledge")
+$kFolder = if ($isRepoFramework) { "knowledge" } else { "knowledge_globale" }
+$catalogoRelPath = Join-Path $kFolder "03_architettura_e_metodologie\catalogo_protocolli_operativi_astralis.md"
+
+$registroRelPath = "docs\report\REGISTRO_REVISIONI_ASTRALIS.md"
+if ($isRepoFramework -and (Test-Path (Join-Path $hubRoot "docs\developer\report\REGISTRO_META_REVISIONI_ASTRALIS.md"))) {
+    $registroRelPath = "docs\developer\report\REGISTRO_META_REVISIONI_ASTRALIS.md"
+}
+
 $requiredFiles = @(
     "CHANGELOG.md",
     "README.md",
     "ISTRUZIONI_DI_AVVIO.md",
-    "docs\report\REGISTRO_REVISIONI_ASTRALIS.md",
-    "knowledge_globale\03_architettura_e_metodologie\catalogo_protocolli_operativi_astralis.md",
+    $registroRelPath,
+    $catalogoRelPath,
     "templates\GEMINI_TEMPLATE.md",
     "templates\CHANGELOG_PROGETTO_TEMPLATE.md",
     "templates\PIANO_TECNICO_TEMPLATE.md",
     "templates\README_PROGETTO_TEMPLATE.md",
     "templates\REGISTRO_REVISIONI_TEMPLATE.md",
-    "templates\ARCHIVIO_REVISIONI_TEMPLATE.md",
-    "templates\AGENTS_TEMPLATE.md"
+    "templates\ARCHIVIO_REVISIONI_TEMPLATE.md"
 )
 
 foreach ($f in $requiredFiles) {
@@ -50,7 +60,7 @@ foreach ($f in $requiredFiles) {
 $changelogPath = Join-Path $hubRoot "CHANGELOG.md"
 $readmePath = Join-Path $hubRoot "README.md"
 $istruzioniPath = Join-Path $hubRoot "ISTRUZIONI_DI_AVVIO.md"
-$catalogoPath = Join-Path $hubRoot "knowledge_globale\03_architettura_e_metodologie\catalogo_protocolli_operativi_astralis.md"
+$catalogoPath = Join-Path $hubRoot $catalogoRelPath
 
 if (Test-Path $changelogPath) {
     $changelogContent = Get-Content $changelogPath -Raw
@@ -115,18 +125,35 @@ if (Test-Path $changelogPath) {
 
 # 2. Verifica Cartelle Strutturali
 Write-Host "`n--- FASE 2: Verifica Moduli e Struttura ---" -ForegroundColor Cyan
+$area1Folder = if (Test-Path (Join-Path $hubRoot "$kFolder\01_filosofia_e_metodologia")) { "$kFolder\01_filosofia_e_metodologia" } else { "$kFolder\01_profilo_e_consuetudini" }
+
 $requiredFolders = @(
-    "docs\piani\attivi",
-    "docs\piani\completati",
-    "docs\report",
-    "knowledge_globale\01_profilo_e_consuetudini",
-    "knowledge_globale\02_accessibilita_e_audio",
-    "knowledge_globale\03_architettura_e_metodologie",
-    "knowledge_globale\04_standard_tecnologici_trasversali",
+    $area1Folder,
+    "$kFolder\02_accessibilita_e_audio",
+    "$kFolder\03_architettura_e_metodologie",
+    "$kFolder\04_standard_tecnologici_trasversali",
     "prompts",
     "templates",
     "scripts"
 )
+
+if ($isRepoFramework) {
+    $requiredFolders += @(
+        "docs\architettura",
+        "docs\guide",
+        "docs\developer\piani\attivi",
+        "docs\developer\piani\completati",
+        "docs\developer\report",
+        "docs\developer\specifiche",
+        "docs\developer\strategie"
+    )
+} else {
+    $requiredFolders += @(
+        "docs\piani\attivi",
+        "docs\piani\completati",
+        "docs\report"
+    )
+}
 
 foreach ($folder in $requiredFolders) {
     $fullPath = Join-Path $hubRoot $folder

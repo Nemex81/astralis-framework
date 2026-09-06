@@ -1,11 +1,11 @@
-# [NOME PROGETTO] — Direttive di Progetto per Anthropic Claude (ASTRALIS v2.8.0)
-# Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
+# [NOME PROGETTO] — Direttive di Progetto per Anthropic Claude (ASTRALIS v3.0.0)
+# Autore: [NOME SVILUPPATORE] (Default da user_preferences.md)
 # Target AI: Claude / Claude Code ([RUOLO: AI Primaria / Copilota Ausiliario])
-# Framework: ASTRALIS v2.8.0
+# Framework: ASTRALIS v3.0.0
 # Eredita da: %USERPROFILE%\.claude\CLAUDE.md (Direttive Globali Macchina)
 # Hub di Contesto Master: GEMINI.md
 
-Questo repository implementa il progetto **[NOME PROGETTO]** in pair programming con **Luca**, sviluppatore non vedente su Windows 11 con screen reader **NVDA** (ZERO MOUSE).
+Questo repository implementa il progetto **[NOME PROGETTO]** in pair programming secondo il profilo configurato in `user_preferences.md` (Default: screen reader **NVDA**, Zero Mouse).
 Tutta la comunicazione deve essere in **Italiano al 100%**, strutturata in forma rigorosamente lineare (zero tabelle o layout 2D ASCII).
 
 ---

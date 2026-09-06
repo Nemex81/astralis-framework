@@ -6,6 +6,14 @@ Questo registro traccia le revisioni architetturali interne del framework a part
 
 ---
 
+## [META-REV-003] Consolidamento Ecosistema da Audit Forense a 10 Assi
+- **Data**: 2026-09-06
+- **Ambito**: Architettura, Scripting Portabile, DRY Clean-Up & Version Coherence
+- **Sintesi**: Esecuzione del piano correttivo a 5 priorità scaturito dall'audit a 10 assi: allineamento universale a v3.0.0 di 18 file, supporto bidirezionale marker negli script, archiviazione piano di rilascio in completati/, trasformazione copie in puntatori DRY, eliminazione AGENTS_TEMPLATE.md ridondante, adozione Cancello 6 Token Budget e neutralizzazione residui operativi rigidi.
+- **Stato**: Completato
+
+---
+
 ## [META-REV-002] Triplo Context Switcher e Discovery Dinamico dell'Hub
 - **Data**: 2026-09-06
 - **Ambito**: Metodologia di Auto-Apprendimento (Protocollo 7) & Meta-Governance

@@ -1,10 +1,10 @@
-# [NOME PROGETTO] — Direttive Universali per Collaboratore AI Custom (ASTRALIS v2.8.0)
-# Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
+# [NOME PROGETTO] — Direttive Universali per Collaboratore AI Custom (ASTRALIS v3.0.0)
+# Autore: [NOME SVILUPPATORE] (Default da user_preferences.md)
 # Target AI: [NOME MODELLO / CLIENT] ([RUOLO: AI Primaria / Copilota Ausiliario])
-# Framework: ASTRALIS v2.8.0
+# Framework: ASTRALIS v3.0.0
 # Hub di Contesto Master: GEMINI.md
 
-Questo repository implementa **[NOME PROGETTO]** in pair programming con **Luca**, sviluppatore completamente non vedente con screen reader **NVDA** (Windows 11, Zero Mouse).
+Questo repository implementa **[NOME PROGETTO]** in pair programming secondo il profilo configurato in `user_preferences.md` (Default: screen reader **NVDA**, Zero Mouse).
 
 ---
 

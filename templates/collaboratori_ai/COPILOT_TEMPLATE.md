@@ -1,7 +1,7 @@
-# [NOME PROGETTO] — Istruzioni di Repository per GitHub Copilot (ASTRALIS v2.8.0)
-# Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
+# [NOME PROGETTO] — Istruzioni di Repository per GitHub Copilot (ASTRALIS v3.0.0)
+# Autore: [NOME SVILUPPATORE] (Default da user_preferences.md)
 # Target AI: GitHub Copilot (Assistente al Completamento & Copilota Ausiliario)
-# Framework: ASTRALIS v2.8.0
+# Framework: ASTRALIS v3.0.0
 
 ## 🛡️ LINEE GUIDA FONDAMENTALI
 1. **Accessibilità Tastiera & Zero Mouse**: Non proporre mai logiche o controlli dipendenti da coordinate del cursore del mouse.

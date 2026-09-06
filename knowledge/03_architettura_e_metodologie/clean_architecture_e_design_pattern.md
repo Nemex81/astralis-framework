@@ -1,4 +1,4 @@
-# Clean Architecture, Design Pattern & Disciplina di Versionamento AVF (v2.7.0)
+# Clean Architecture, Design Pattern & Disciplina di Versionamento AVF (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
 # Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
 # Ambito: Globale / Universale
@@ -80,7 +80,7 @@ Questo documento definisce i principi di Clean Architecture, disaccoppiamento e 
 
 1. **Applicazione dei Principi OOP alla Governance AI**:
    - **Livello Astratto (Master Hub & Genoma Livello 0)**:
-     * Agisce come un'*Interfaccia Astratta*: stabilisce i contratti metodologici (10 Protocolli, standard 7 Assi, simulazioni a 3 livelli, pipeline 4 fasi, principio di simmetria).
+     * Agisce come un'*Interfaccia Astratta*: stabilisce i contratti metodologici (12 Protocolli, standard 7 Assi, simulazioni a 3 livelli, pipeline 4 fasi, principio di simmetria).
      * Non contiene dettagli implementativi legati a singoli motori o framework per non appesantire la memoria.
    - **Livello Concreto (Progetti Locali & Livello 2)**:
      * Agisce come un'*Implementazione Concreta*: eredita i protocolli e li specializza con le classi, le librerie, i comandi di build e le regole geometriche/logiche del proprio dominio.

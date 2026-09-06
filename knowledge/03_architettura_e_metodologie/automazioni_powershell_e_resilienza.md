@@ -1,4 +1,4 @@
-# Automazioni PowerShell, Script Batch e Resilienza Multi-Computer
+# Automazioni PowerShell, Script Batch e Resilienza Multi-Computer (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
 # Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
 # Ambito: Globale / Universale
@@ -88,7 +88,7 @@ Questo documento definisce gli standard per la creazione di script di sistema, t
 
 ---
 
-## 🛡️ 6. ARCHITETTURA MULTI-CANALE DI RESILIENZA, VERSIONAMENTO & CLOUD (ASTRALIS v2.7.2)
+## 🛡️ 6. ARCHITETTURA MULTI-CANALE DI RESILIENZA, VERSIONAMENTO & CLOUD (ASTRALIS v3.0.0)
 
 1. **Disaccoppiamento dei 4 Canali per Scopo Funzionale**:
    - I servizi di archiviazione e cloud (Git, OneDrive, Google Drive) non sono intercambiabili né ridondanti, ma assolvono a ruoli complementari:

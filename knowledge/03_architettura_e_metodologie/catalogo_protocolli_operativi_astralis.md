@@ -1,4 +1,4 @@
-# Catalogo dei Protocolli Operativi Ufficiali ASTRALIS (v2.8.0)
+# Catalogo dei Protocolli Operativi Ufficiali ASTRALIS (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
 # Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
 # Ambito: Globale / Master Hub ASTRALIS

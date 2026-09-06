@@ -1,11 +1,11 @@
-# [NOME PROGETTO] — Direttive di Progetto per OpenAI / GPT Codex (ASTRALIS v2.8.0)
-# Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
+# [NOME PROGETTO] — Direttive di Progetto per OpenAI / GPT Codex (ASTRALIS v3.0.0)
+# Autore: [NOME SVILUPPATORE] (Default da user_preferences.md)
 # Target AI: GPT Codex / ChatGPT ([RUOLO: Copilota Ausiliario / AI Primaria])
-# Framework: ASTRALIS v2.8.0
+# Framework: ASTRALIS v3.0.0
 # Eredita da: %USERPROFILE%\.codex\AGENTS.md (Direttive Globali Macchina)
 # Hub di Contesto Master: GEMINI.md
 
-Questo repository implementa il progetto **[NOME PROGETTO]** ed è sviluppato in pair programming con **Luca**, sviluppatore completamente non vedente su Windows 11 con screen reader **NVDA** (ZERO MOUSE).
+Questo repository implementa il progetto **[NOME PROGETTO]** in pair programming con lo sviluppatore secondo il profilo configurato in `user_preferences.md` (Default: screen reader **NVDA**, Zero Mouse).
 Tutta l'interazione con l'ambiente, il codice, i menu e gli strumenti avviene tramite sintesi vocale, comandi da tastiera completi e formattazione rigorosamente lineare ad elenchi (divieto assoluto di tabelle o grafici 2D).
 
 ---

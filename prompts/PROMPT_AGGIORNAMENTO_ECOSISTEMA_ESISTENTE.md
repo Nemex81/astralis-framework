@@ -1,26 +1,26 @@
-# Prompt Master: Aggiornamento Integrativo & Allineamento a Cascata ASTRALIS v2.0
+# Prompt Master: Aggiornamento Integrativo & Allineamento a Cascata ASTRALIS (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
 # Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
 # Framework: ASTRALIS (Adaptive Standards for Testing, Rules, Accessibility & Level Integration Systems)
 # Master Hub: <astralis-hub>
 
-Questo prompt guida Antigravity nell'esecuzione del **Protocollo 8 (Aggiornamento Ecosistema)**: Smart Merge Globale, Scansione a Cascata dei Progetti, Fusione Integrativa Locale e Audit di Conformità Post-Aggiornamento.
+Questo prompt guida Antigravity nell'esecuzione del **Protocollo Aggiornamento Ecosistema**: Smart Merge Globale, Scansione a Cascata dei Progetti, Fusione Integrativa Locale e Audit di Conformità Post-Aggiornamento.
 
 ---
 
 ## 🎯 ISTRUZIONI OPERATIVE PER ANTIGRAVITY
 
-Sei Antigravity, il copilota e software engineer di **Luca**. Il tuo compito è eseguire l'aggiornamento a cascata di ASTRALIS alla versione **2.0** garantendo **zero perdita dati e preservazione integrale delle personalizzazioni su entrambi i binari di Auto-Apprendimento**.
+Sei l'AI Pair Programmer dello sviluppatore. Il tuo compito è eseguire l'aggiornamento a cascata di ASTRALIS alla versione **3.0.0** garantendo **zero perdita dati e preservazione integrale delle personalizzazioni su entrambi i binari di Auto-Apprendimento**.
 
 ---
 
 ### FASE 1: AUDIT GLOBALE, BACKUP & RILEVAMENTO PERSONALIZZAZIONI
-1. **Verifica Integrità Master Hub**:
-   - Assicurati che i file del Master Hub (`catalogo_protocolli_operativi_astralis.md`, `REGISTRO_REVISIONI_ASTRALIS.md`, `templates/`, `scripts/`) siano integri;
+1. **Verifica Integrità Master Hub / Framework**:
+   - Assicurati che i file (`catalogo_protocolli_operativi_astralis.md`, registro revisioni, `templates/`, `scripts/`) siano integri;
 2. **Scansione del Vecchio Genoma Globale (`<config-dir>\config\GEMINI.md`)**:
    - Crea il backup preventivo timestampato `GEMINI_[timestamp].bak`;
-   - Isola e rileva tutte le regole, consuetudini o alias custom creati da Luca;
-   - Crea lo snapshot preventivo di sicurezza `knowledge_globale_[timestamp].bak` nel Master Hub;
+   - Isola e rileva tutte le regole, consuetudini o alias custom creati dall'utente;
+   - Crea lo snapshot preventivo di sicurezza `knowledge_[timestamp].bak` nel Master Hub;
 3. **Report Trasparente delle Personalizzazioni**:
    - Emetti un report lineare per NVDA indicando chiaramente cosa è stato rilevato e come verrà incapsulato nell'**Isola Protetta Utente** (`## 🛡️ SEZIONE PERSONALIZZATA UTENTE`).
 
@@ -28,9 +28,9 @@ Sei Antigravity, il copilota e software engineer di **Luca**. Il tuo compito è 
 
 ### FASE 2: APPLICAZIONE SMART MERGE LIVELLO 0 & LIVELLO 1
 1. **Genoma Globale (Livello 0)**:
-   - Scrivi il nuovo `<config-dir>\config\GEMINI.md` con l'identità di Luca, le 6 Regole Auree v2.0, il Dispatcher on-demand con micro-sommari e l'Isola Protetta Utente con le sue personalizzazioni;
+   - Scrivi il nuovo `<config-dir>\config\GEMINI.md` con l'identità dello sviluppatore, le Regole Auree e i 6 Canoni di ASTRALIS v3.0.0, il Dispatcher on-demand con micro-sommari e l'Isola Protetta Utente con le sue personalizzazioni;
 2. **Ponte Amministrativo (Livello 1)**:
-   - Allinea `<root-progetti>/GEMINI.md` con i 10 protocolli, il polimorfismo di governance e la netta separazione tra `GEMINI.md` e `README.md`.
+   - Allinea `<root-progetti>/GEMINI.md` con i 12 protocolli, il polimorfismo di governance e la netta separazione tra `GEMINI.md` e `README.md`.
 
 ---
 
@@ -38,7 +38,7 @@ Sei Antigravity, il copilota e software engineer di **Luca**. Il tuo compito è 
 1. Esegui la scansione delle cartelle di progetto nel workspace (`$env:OneDrive\progetti\`, `$env:USERPROFILE\progetti\`);
 2. Emetti il **Report di Triage Progetti per NVDA**:
    - `[DA AGGIORNARE IN MODO INTEGRATIVO]`: progetti con vecchi `GEMINI.md` o schede `knowledge/`;
-   - `[GIÀ ALLINEATO]`: progetti già aggiornati alla v2.0;
+   - `[GIÀ ALLINEATO]`: progetti già aggiornati alla v3.0.0;
    - `[CANDIDATO ONBOARDING]`: cartelle di progetto senza governance ASTRALIS.
 
 ---

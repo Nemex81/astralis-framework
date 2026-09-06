@@ -1,4 +1,4 @@
-# Standard Modding, Mod Loader e Gestione Runtime Congelati (v2.5.3)
+# Standard Modding, Mod Loader e Gestione Runtime Congelati (v3.0.0)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
 # Target AI: Antigravity (Senior AI Pair Programmer & Software Engineer)
 # Ambito: Globale / Universale

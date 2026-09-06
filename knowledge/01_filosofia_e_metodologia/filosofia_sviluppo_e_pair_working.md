@@ -123,10 +123,10 @@ Durante la Fase 4 (Auto-Apprendimento Continuo), prima di formulare o inserire q
 
 ---
 
-## ⚡ 10. LA GERARCHIA DEGLI 11 PROTOCOLLI OPERATIVI ASTRALIS & RICONOSCIMENTO SEMANTICO
+## ⚡ 10. LA GERARCHIA DEI 12 PROTOCOLLI OPERATIVI ASTRALIS & RICONOSCIMENTO SEMANTICO
 
 1. **La Standardizzazione ad Azioni Dirette**:
-   - I processi ricorrenti di lavoro con Luca sono formalizzati in **11 Protocolli Operativi Ufficiali**:
+   - I processi ricorrenti di lavoro con l'utente sono formalizzati in **12 Protocolli Operativi Ufficiali**:
      * *1. Protocollo Progettazione* (Strategia, contratti architetturali, piano tecnico formale e gating);
      * *2. Protocollo Validazione* (Analisi preventiva sui 7 Assi di Qualità e Matrice di Simulazione a 3 Livelli);
      * *3. Protocollo Esecuzione* (Pre-flight check, codice chirurgico e deploy proattivo);
@@ -137,7 +137,8 @@ Durante la Fase 4 (Auto-Apprendimento Continuo), prima di formulare o inserire q
      * *8. Protocollo Aggiornamento* (Smart Merge 5 fasi, Isola Protetta, triage workspace e audit di conformità);
      * *9. Protocollo Onboarding* (Wizard interattivo a 3 domande e bootstrap deterministico);
      * *10. Protocollo Sicurezza* (Eliminazione protetta a 4 verifiche con autorizzazione esplicita e RCA bug ostici);
-     * *11. Protocollo Pulizia* (Dead code & asset purge, audit a doppia chiave, prospetto lineare e 5 barriere di sicurezza).
+     * *11. Protocollo Pulizia* (Dead code & asset purge, audit a doppia chiave, prospetto lineare e 5 barriere di sicurezza);
+     * *12. Protocollo Dialettica Ingegneristica & Auto-Revisione Avversariale (Inner Codex)* (Autonomia ingegneristica, 6 cancelli inviolabili e audit anti-allucinazione).
 
 2. **Riconoscimento Semantico Flessibile & Feedback di Aggancio**:
    - Luca non è vincolato a formule rigide. Qualsiasi comando naturale equivalente viene interpretato istantaneamente.

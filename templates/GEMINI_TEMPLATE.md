@@ -1,8 +1,8 @@
-# [NOME PROGETTO] — Hub di Contesto & Governance Locale (GEMINI.md — ASTRALIS v2.8.0)
+# [NOME PROGETTO] — Hub di Contesto & Governance Locale (GEMINI.md — ASTRALIS v3.0.0)
 
-# Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA)
+# Autore: [NOME SVILUPPATORE] (Default da user_preferences.md)
 
-# Target AI: Antigravity (Primario) & Codex/ChatGPT (Copilota Ausiliario)
+# Target AI: Antigravity (Primario) & Codex/ChatGPT/Claude (Copiloti Ausiliari)
 
 # Eredita da:
 
@@ -14,13 +14,13 @@
 
 
 
-Questo repository implementa il progetto **[NOME PROGETTO]** ed è sviluppato in pair programming con **Luca**, sviluppatore completamente non vedente su Windows 11 con screen reader **NVDA** (**ZERO MOUSE**).
+Questo repository implementa il progetto **[NOME PROGETTO]** ed è sviluppato in pair programming secondo il profilo di accessibilità configurato in `user_preferences.md` (Default: screen reader **NVDA**, interazione 100% da tastiera, **ZERO MOUSE**).
 
-Tutta l'interazione con l'ambiente, il codice, i log e i menu avviene tramite sintesi vocale (NVDA / SAPI), feedback acustici e comandi da tastiera completi.
+Tutta l'interazione con l'ambiente, il codice, i log e i menu rispetta il Principio di Simmetria Universale Bi-Direzionale (ergonomia vocale per non vedenti e interfaccia moderna per vedenti).
 
 
 
-Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vincolante sia per l'assistente AI primario (**Antigravity**) che per i copiloti ausiliari di peer programming (come **Codex / ChatGPT**). Tutti i dettagli specialistici risiedono nella cartella [`knowledge/`](./).
+Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vincolante sia per l'assistente AI primario (**Antigravity**) che per i copiloti ausiliari di peer programming. Tutti i dettagli specialistici risiedono nella cartella [`knowledge/`](./knowledge/).
 
 
 
@@ -28,61 +28,47 @@ Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vinc
 
 
 
-## 🌟 Le Regole Auree Inviolabili del Progetto
+## 🛡️ LE 6 REGOLE AUREE LOCALI INVIOLABILI
 
 
 
-0. **Consuetudini Operative, Dialogo a 2 Tempi & Gating Semantico**:
+1. **Regola 0: Dialogo a 2 Tempi & Gating Semantico (Default Consultivo Permanente)**:
 
-   - Default consultivo: analizza, verifica i log, consulta le schede di riferimento e **attendi sempre la conferma esplicita di Luca prima di modificare codice o file**.
+   - Antigravity analizza, propone e pianifica; non modifica mai file in modo autonomo: attendi sempre la conferma esplicita dell'utente (*"procedi"*, *"applica"*, *"esegui"*).
 
-   - *Gating Semantico Fase 1*: Comandi come *"passa alla fase 1"* autorizzano **esclusivamente la stesura del Piano Tecnico Formale (Sotto-Fase 1A)** in `docs/piani/attivi/` e impongono lo **Stop Obbligatorio** prima di toccare codice o configurazioni (Sotto-Fase 1B).
+   - Comandi esplorativi (*"cosa ne pensi?"*, *"valuta"*, *"analizza"*) impongono la modalità consultiva pura (zero modifiche).
 
-   - *Protocollo di Eliminazione Protetta*: Motivazione chiara, analisi d'impatto, verifica assenza perdita dati e attesa di autorizzazione esplicita prima di qualsiasi cancellazione.
-
-
-
-1. **Accessibilità Vocale Assoluta & Volumi di Sicurezza**:
-
-   - Nessuna funzione deve dipendere da mouse o elementi visivi (interazione 100% da tastiera).
-
-   - Volumi audio posizionale o effetti sonori congelati a un massimo compreso tra `0.7f` e `0.8f` per non coprire mai la voce dello screen reader.
+   - *Protocollo di Eliminazione Protetta*: Nessun file può essere eliminato senza spiegare motivazione, impatto, assenza perdita dati e attendere conferma.
 
 
 
-2. **Standard I18N & Convenzioni Formato**:
+2. **Accessibilità Vocale Assoluta & Simmetria Bi-Direzionale**:
 
-   - Nello sviluppo e fork ci concentriamo su **Italiano** e **Inglese** (standard PR upstream);
+   - Zero dipendenza dal mouse per lo sviluppatore; navigazione sequenziale, linearità per sintesi vocale.
 
-   - Nei file `.json` di lingua, chiavi disposte in **rigoroso ordine alfabetico crescente**.
+   - Volumi di sicurezza congelati (0.7f - 0.8f) e ducking audio nei giochi/mod.
+
+   - Antigravity garantisce la coesistenza armonica: GUI moderna per utenti vedenti, piena accessibilità da tastiera per tutti.
 
 
 
-3. **Rete Documentale a 4 Nodi Comunicanti (Pointer Hub DRY) in `docs/`**:
+3. **Rigore I18N, Convenzioni & Trasparenza Documentale**:
 
-   - `docs/strategie/attive/`: Strategie logico-cognitive in elaborazione o discussione (Fase 0);
+   - Documentazione interna, piani, report e commit: **100% in Italiano**.
 
-   - `docs/strategie/archiviate/`: Strategie convalidate e convertite in piani tecnici;
+   - Fork internazionali e PR upstream: contributi in lingua inglese isolati nei file appositi.
 
-   - `docs/piani/attivi/`: Piani tecnici in stesura (1A) o in attesa di collaudo (1B);
 
-   - `docs/piani/completati/`: Piani tecnici collaudati con successo e archiviati;
 
-   - `docs/report/`: Registro Revisioni attivo (`REGISTRO_REVISIONI.md`) e archivio storico (`ARCHIVIO_REVISIONI.md`);
+4. **Pipeline Operativa a 4 Fasi & Rete a 4 Nodi Comunicanti (DRY)**:
 
-   - `docs/report/archivio/`: Report di sessione e telemetria storici (URCP Standard);
-
-   - `docs/manuali/`: Guide all'uso e protocolli di collaudo.
-
-   - **Disaccoppiamento `README.md`**: Il `README.md` di root è riservato alla documentazione funzionale del software per gli utenti finali e la community. L'Indice Ragionato delle regole risiede unicamente in questo `GEMINI.md`.
-
-4. **Pipeline Operativa a 4 Fasi & Protocollo Telemetria Live**:
+   - *Fase 0 (Strategia UPCS)*: Analisi logico-cognitiva per compiti complessi in `docs/strategie/attive/`;
 
    - *Fase 1A (Piano Tecnico & Stop)*: Stesura piano in `docs/piani/attivi/` con validazione sui 7 Assi e Matrice di Simulazione a 3 Livelli;
 
    - *Fase 1B (Esecuzione Tecnica & Test)*: Modifiche al codice, compilazione con flag anti-lock (`--no-daemon`) e test automatici eseguiti solo POST-APPROVAZIONE;
 
-   - *Fase 2 (Deploy Proattivo, Telemetria & Test Manuale)*: Deploy automatico nelle istanze attive prima del test di Luca. Durante il collaudo opera la **Telemetria Live** (Protocollo 4) con aggiornamento automatico proattivo del **Registro Revisioni**;
+   - *Fase 2 (Deploy Proattivo, Telemetria & Test Manuale)*: Deploy automatico nelle istanze attive prima del collaudo manuale. Durante il collaudo opera la **Telemetria Live** (Protocollo 4) con aggiornamento proattivo del **Registro Revisioni** (`docs/report/REGISTRO_REVISIONI.md`);
 
    - *Fase PRAPI (Protocollo 5)*: Ciclo rapido di revisione e affinamento post-collaudo in 4 passi;
 
@@ -94,7 +80,9 @@ Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vinc
 
      - **Binario A (Locale)**: Aggiornamento delle schede in `knowledge/` del progetto;
 
-     - **Binario B (Globale)**: Aggiornamento dei moduli in `knowledge_globale/` del Master Hub.
+     - **Binario B (Globale)**: Aggiornamento dei moduli nel Master Hub.
+
+
 
 5. **Disciplina di Meta-Governance & Ingegneria delle Regole (ASTRALIS Canon Crafting)**:
 
@@ -112,13 +100,19 @@ Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vinc
 
 
 
-- [`00_architettura_e_struttura.md`](./00_architettura_e_struttura.md): Panoramica architetturale, moduli e flussi di dati del progetto.
+- [`00_consuetudini_operative_e_sinergia_assistente.md`](./knowledge/00_consuetudini_operative_e_sinergia_assistente.md): Consuetudini operative, dialogo a 2 tempi ed eliminazione protetta.
 
-- [`01_accessibilita_e_controlli.md`](./01_accessibilita_e_controlli.md): Mappatura tasti, gestione focus ed eventi di sintesi vocale.
+- [`01_accessibilita_vocale_e_interazione_tastiera.md`](./knowledge/01_accessibilita_vocale_e_interazione_tastiera.md): Focus management, tastiera 100% e sintesi vocale.
 
-- [`02_standard_sviluppo_e_convenzioni.md`](./02_standard_sviluppo_e_convenzioni.md): Convenzioni di codice, gestione branch Git e internazionalizzazione.
+- [`02_architettura_stack_e_runtime.md`](./knowledge/02_architettura_stack_e_runtime.md): Architettura stack, linguaggi, toolchain e runtime protetti.
 
-- [`03_gestione_errori_e_diagnostica.md`](./03_gestione_errori_e_diagnostica.md): Gestione eccezioni, log diagnostici e protocolli di debug.
+- [`03_standard_git_branching_e_commit.md`](./knowledge/03_standard_git_branching_e_commit.md): Convenzioni Git, commit semantici e disciplina I18N.
+
+- [`04_struttura_progetto_e_gestione_dati.md`](./knowledge/04_struttura_progetto_e_gestione_dati.md): Mappa cartelle, gestione dati e percorsi dinamici.
+
+- [`09_registro_bug_e_soluzioni.md`](./knowledge/09_registro_bug_e_soluzioni.md): Memoria tecnica di anomalie riscontrate e risolte.
+
+- [`10_standard_piani_verifiche_e_living_documentation.md`](./knowledge/10_standard_piani_verifiche_e_living_documentation.md): Standard di verifica, piani e documentazione viva.
 
 
 

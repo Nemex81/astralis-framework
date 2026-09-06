@@ -8,7 +8,7 @@
 .PARAMETER Version
     Versione specifica da assegnare alla release. Default: auto-rilevata da CHANGELOG.md.
 .PARAMETER CustomTag
-    Suffisso o etichetta personalizzata dell'utente (es. "luca-custom", "nightly", "fork").
+    Suffisso o etichetta personalizzata dell'utente (es. "custom-release", "nightly", "fork").
 .PARAMETER DestinationDir
     Cartella di destinazione per i file ZIP. Default: $hubRoot\releases\
 .PARAMETER IncludeLatest
@@ -44,20 +44,15 @@ function Find-AstralisMasterHub {
         $candidates += (Join-Path $env:USERPROFILE "ASTRALIS")
     }
 
-    $requiredMarkers = @("knowledge_globale", "prompts", "templates", "scripts")
-
     foreach ($cand in $candidates) {
         if (-not $cand -or -not (Test-Path $cand)) { continue }
         
-        $allMarkersPresent = $true
-        foreach ($marker in $requiredMarkers) {
-            if (-not (Test-Path (Join-Path $cand $marker))) {
-                $allMarkersPresent = $false
-                break
-            }
-        }
+        $hasKnowledge = (Test-Path (Join-Path $cand "knowledge")) -or (Test-Path (Join-Path $cand "knowledge_globale"))
+        $hasPrompts   = Test-Path (Join-Path $cand "prompts")
+        $hasTemplates = Test-Path (Join-Path $cand "templates")
+        $hasScripts   = Test-Path (Join-Path $cand "scripts")
 
-        if ($allMarkersPresent) {
+        if ($hasKnowledge -and $hasPrompts -and $hasTemplates -and $hasScripts) {
             return (Resolve-Path $cand).Path
         }
     }
@@ -78,7 +73,7 @@ function Get-AstralisVersion([string]$hubPath) {
             }
         }
     }
-    return "2.6.3" # Fallback conservativo
+    return "3.0.0" # Fallback conservativo
 }
 
 # ============================================================
@@ -88,7 +83,10 @@ function Sync-AstralisTrittico([string]$hubPath, [string]$targetVersion) {
     $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
     $readmePath = Join-Path $hubPath "README.md"
     $istruzioniPath = Join-Path $hubPath "ISTRUZIONI_DI_AVVIO.md"
-    $catalogoPath = Join-Path $hubPath "knowledge_globale\03_architettura_e_metodologie\catalogo_protocolli_operativi_astralis.md"
+    $catalogoPath = Join-Path $hubPath "knowledge\03_architettura_e_metodologie\catalogo_protocolli_operativi_astralis.md"
+    if (-not (Test-Path $catalogoPath)) {
+        $catalogoPath = Join-Path $hubPath "knowledge_globale\03_architettura_e_metodologie\catalogo_protocolli_operativi_astralis.md"
+    }
 
     # 1. README.md
     if (Test-Path $readmePath) {
