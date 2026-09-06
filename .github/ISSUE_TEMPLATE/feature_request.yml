@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose an improvement for ASTRALIS Framework
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the need before the proposed implementation. Keep all information free of credentials and personal data.
+  - type: textarea
+    id: need
+    attributes:
+      label: Problem or need
+      description: What problem should the feature solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: Describe the desired behavior without requiring a specific implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Accessibility considerations
+      description: Explain keyboard, screen-reader, cognitive, or other accessibility requirements.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I have removed credentials, private paths, and personal data.
+          required: true
