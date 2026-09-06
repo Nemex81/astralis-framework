@@ -4,6 +4,21 @@
 
 Tutte le modifiche rilevanti, i rilasci e le evoluzioni del framework universale **ASTRALIS** sono tracciate in questo documento.
 
+## 🚀 [v3.0.1] — 2026-09-06 (Triplo Context Switcher, Discovery Dinamico dell'Hub & Regole Anti-Conflitto)
+
+### 🌟 Novità di Metodologia, Protocollo 7 & Meta-Governance
+- **Triplo Context Switcher Automatico a Marker (Protocollo 7, `catalogo_protocolli_operativi_astralis.md`)**:
+  - Rilevamento deterministico a runtime del perimetro operativo in Fase 4:
+    * *Ambito C (Framework Distribuibile)*: modalità Framework Core Maintainer in `astralis-framework` con Dogfooding in `docs/developer/` e zero dati personali;
+    * *Ambito B (Master Hub Locale)*: manutenzione della governance della postazione locale dell'utente e dell'Isola Protetta;
+    * *Ambito A (Progetto Verticale)*: sviluppo mirato sul singolo workspace con doppio binario locale/globale.
+- **Algoritmo Dinamico di Discovery del Master Hub (Zero Hardcoding)**:
+  - Eliminazione di percorsi cablati per il Master Hub locale; cascata di rilevamento a 3 livelli: Configurazione Esplicita (Manifest Livello 0 / `$env:ASTRALIS_HUB`) -> Scansione Marker Strutturali -> Fallback interattivo one-time in `user_preferences.md`.
+- **Codificazione del Context Fencing & 4 Regole Anti-Conflitto (`ingegneria_delle_regole_e_meta_governance.md`)**:
+  - Direzionalità a senso unico della privacy (mai dati privati verso l'upstream pubblico), separazione impermeabile dei registri (RRU vs Meta-Registro) e domanda ponte contestualizzata per NVDA.
+
+---
+
 ## 🚀 [v3.0.0] — 2026-09-06 (Universal Open Source Release & Matrice di Convergenza Modulare)
 
 ### 🌟 Novità di Sistema, Rilascio Open Source & Architettura Universale

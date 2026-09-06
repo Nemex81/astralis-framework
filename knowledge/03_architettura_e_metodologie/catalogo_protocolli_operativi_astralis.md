@@ -160,26 +160,37 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
 
 ---
 
-### 7. PROTOCOLLO APPRENDIMENTO *(Auto-Apprendimento Continuo a Doppio Binario — Fase 4)*
+### 7. PROTOCOLLO APPRENDIMENTO *(Auto-Apprendimento Continuo Contestuale & Discovery Dinamico — Fase 4)*
 - **Comandi Trigger**: *"Avvia Protocollo Apprendimento"*, *"passiamo all'auto-apprendimento"*, *"avvia la fase 4"*, *"estraiamo le lezioni"*, *"aggiorna la governance"*.
-- **Scopo**: Capitalizzare la conoscenza emersa dalla sessione, estraendo pattern riutilizzabili ed evitando la perdita di memoria dell'AI.
+- **Scopo**: Capitalizzare la conoscenza emersa dalla sessione, estraendo pattern riutilizzabili ed evitando la perdita di memoria dell'AI, con isolamento assoluto tra contesti di progetto, governance locale dell'utente e framework distribuibile pubblico.
 - **Passaggi Operativi**:
-  1. *Analisi 3D delle Lezioni*: Dimensione Tecnica, Metodologica e Comunicativa, classificate per ambito (`[Locale]` vs `[Globale]`);
-  2. *Auto-Audit Preventivo & Diagnosi Mancata Osservanza*: Ricerca preventivamente se la regola esisteva già; se esisteva, spiega perché non è stata osservata;
-  3. *Doppio Binario*:
-     - *Binario A (Locale)*: Creazione/aggiornamento schede `knowledge/` locali;
-     - *Binario B (Globale)*: Aggiornamento schede tematiche in `knowledge_globale/` nel Master Hub;
-  4. *Sincronizzazione a Cascata & Trittico di Root*: Allineamento di `CHANGELOG.md`, `README.md`, `ISTRUZIONI_DI_AVVIO.md` e re-export 1-click di `ASTRALIS_Universal_Starter_Kit.zip`.
-  5. *Checkpoint di Auto-Apprendimento Inter-Fase nei Grandi Refactor Multi-Fase (Consolidamento Frattale On-Demand)*:
-     - Nelle epiche complesse articolate in più sotto-fasi (Fase 1, 2, 3A, 3B, 4...), al completamento e convalidazione di una fase intermedia che abbia fatto emergere scoperte architetturali, imprevisti superati o pattern inediti, Antigravity propone proattivamente a Luca una sessione di auto-apprendimento inter-fase.
-     - Questo consolida immediatamente le lezioni apprese, proteggendo le fasi successive della medesima epica dal ripetersi degli stessi errori.
-   6. *Validazione Pre-Scrittura sui 6 Canoni di Meta-Governance*:
-      - Prima di formalizzare o proporre l'aggiornamento di qualsiasi regola o direttiva, l'assistente convalida la bozza rispetto a [`ingegneria_delle_regole_e_meta_governance.md`](./ingegneria_delle_regole_e_meta_governance.md):
-        * *Budget Token*: Il file `GEMINI.md` resta $\le 250$ righe? Se no, sposta la teoria nei moduli `knowledge/`.
-        * *Disaccoppiamento Manifest*: Nel router risiedono solo parametri concreti (3-6 righe); la teoria resta nei moduli estesi.
-        * *Puntatori DRY*: Riferimenti navigabili a nodi unici senza blocchi di testo duplicati.
-        * *Linearità NVDA*: Flusso rigorosamente sequenziale ad elenchi, zero tabelle o disegni 2D ASCII.
-        * *Igiene File*: Codifica UTF-8 senza BOM e interruzioni CRLF native.
+  1. *Triplo Context Switcher Automatico a Marker Strutturali (Rilevamento Deterministico del Contesto)*:
+     All'avvio della Fase 4, l'AI auto-rileva istantaneamente l'ambito in cui sta operando prima di proporre modifiche:
+     - **Ambito C — Manutenzione Framework Distribuibile (Repository GitHub)**:
+       * *Riconoscimento*: Presenza del remote Git `astralis-framework` o della cartella `docs/developer/specifiche/`.
+       * *Azione*: Modalità *Framework Core Maintainer*. Dogfooding su `knowledge/` pubblica, `templates/`, `scripts/`, documentazione `docs/`, registrazione in `docs/developer/report/REGISTRO_META_REVISIONI_ASTRALIS.md` e `CHANGELOG.md` pubblico. Divieto assoluto di memorizzare dettagli personali o percorsi della macchina.
+     - **Ambito B — Manutenzione Master Hub Locale (Livello Globale Postazione Utente)**:
+       * *Riconoscimento*: Presenza dell'hub locale dell'utente (marker `user_preferences.md` personale, `knowledge_globale/` o router ponte Livello 1) e assenza del repository Git distribuibile pubblico.
+       * *Azione*: Modalità *Master Hub Manager*. Aggiorna le regole trasversali della postazione, preserva l'Isola Protetta Utente e rigenera lo Starter Kit ZIP locale.
+     - **Ambito A — Sviluppo su Progetto Utente Verticale (Singolo Workspace)**:
+       * *Riconoscimento*: Presenza di un workspace di progetto (videogioco, scrittura narrativa, addon, utility, software) con router locale di Livello 2.
+       * *Azione (Doppio Binario)*:
+         - *Binario A (Locale)*: Creazione/aggiornamento schede `knowledge/` del progetto;
+         - *Binario B (Globale Privato Utente)*: Proposta dell'invariante trasversale unicamente al Master Hub locale dell'utente (individuato dinamicamente). Divieto assoluto di toccare il repository pubblico.
+  2. *Algoritmo Dinamico di Discovery del Master Hub (Zero Hardcoding)*:
+     Per individuare il Master Hub locale su qualsiasi computer senza presupporre percorsi cablati:
+     - *Livello 1 (Configurazione Esplicita)*: Lettura del percorso nel manifest di Livello 0 (`Master Hub: <percorso>`) o variabile d'ambiente `$env:ASTRALIS_HUB`.
+     - *Livello 2 (Discovery a Marker)*: Scansione nelle radici note (`$env:OneDrive`, `$env:USERPROFILE`, parent `..`) alla ricerca di una cartella contenente contemporaneamente `catalogo_protocolli_operativi_astralis.md`, `knowledge/` o `knowledge_globale/` e `CHANGELOG.md`.
+     - *Livello 3 (Fallback Interattivo)*: Richiesta one-time all'utente (*"In quale percorso risiede il tuo Master Hub ASTRALIS?"*) e memorizzazione nel profilo locale `user_preferences.md` escluso da Git.
+  3. *Analisi 3D delle Lezioni*: Dimensione Tecnica, Metodologica e Comunicativa, classificate per ambito contestuale.
+  4. *Auto-Audit Preventivo & Diagnosi Mancata Osservanza*: Ricerca se la regola esisteva già; se esisteva, spiega la causa radice della mancata osservanza.
+  5. *Le 4 Regole Auree Anti-Conflitto e Context Fencing*:
+     - *Direzionalità a senso unico della privacy*: i dati personali non fluiscono mai verso l'upstream pubblico.
+     - *Separazione impermeabile dei registri*: RRU del progetto vs Registro locale dell'Hub vs Meta-Registro pubblico.
+     - *Validazione pre-scrittura sui 6 Canoni di Meta-Governance* (token budget, disaccoppiamento, puntatori DRY, linearità NVDA, igiene UTF-8/LF/CRLF).
+     - *Domanda Ponte Contestualizzata*: La chiusura di Fase 3 formula la domanda esplicitando chiaramente l'ambito (Progetto, Hub Locale, o Framework Distribuibile).
+  6. *Checkpoint di Auto-Apprendimento Inter-Fase nei Grandi Refactor Multi-Fase (Consolidamento Frattale On-Demand)*:
+     - Nelle epiche complesse multi-fase, consolidamento immediato delle lezioni apprese tra una sotto-fase e la successiva, proteggendo l'esecuzione da imprevisti ripetuti.
 
 ---
 

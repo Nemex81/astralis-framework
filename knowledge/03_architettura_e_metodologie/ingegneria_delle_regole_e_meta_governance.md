@@ -58,16 +58,19 @@ Ogni regola, direttiva o aggiornamento normativo deve conformarsi rigorosamente 
 
 Prima di proporre o codificare qualsiasi nuova regola, l'assistente AI deve seguire questa procedura in 4 passi:
 
-1. **Passo 1 — Valutazione di Necessità & Non-Ridondanza (Fase 0)**:
+1. **Passo 1 — Valutazione di Necessità, Non-Ridondanza & Context Fencing (Fase 0)**:
    - Verificare se l'esigenza è già coperta dai 12 Protocolli o dalle schede esistenti.
-   - Determinare se la regola è *Globale* (Master Hub) o *Locale* (singolo progetto).
+   - **Identificazione del Contesto (Context Fencing)**:
+     * *Ambito C (Framework Distribuibile)*: standard universale pubblico per la community (repository `astralis-framework`, zero riferimenti personali);
+     * *Ambito B (Master Hub Locale)*: consuetudine trasversale per la postazione locale dell'utente;
+     * *Ambito A (Progetto Locale)*: regola specifica circoscritta al singolo workspace.
 2. **Passo 2 — Redazione nel Modulo Esteso (Knowledge)**:
-   - Creare o aggiornare la scheda specialistica in `knowledge_globale/` o `knowledge/` applicando i Canoni 5 (Linearità NVDA) e 6 (Igiene File).
-3. **Passo 3 — Puntatore Sintetico nel Router (`GEMINI.md`)**:
-   - Inserire nel file `GEMINI.md` pertinente una sintesi di massimo 2-4 righe con link cliccabile al modulo esteso.
+   - Creare o aggiornare la scheda specialistica in `knowledge/` applicando i Canoni 5 (Linearità NVDA) e 6 (Igiene File).
+3. **Passo 3 — Puntatore Sintetico nel Router (`GEMINI.md` / `AGENTS.md`)**:
+   - Inserire nel router pertinente una sintesi di massimo 2-4 righe con link cliccabile al modulo esteso.
    - Verificare che il file non superi la soglia limite di 250 righe.
 4. **Passo 4 — Audit di Conformità & Dialogo a 2 Tempi (Regola 0)**:
-   - Presentare a Luca la proposta in formato compatto ad alto segnale.
+   - Presentare all'utente la proposta in formato compatto ad alto segnale.
    - Attendere il comando esplicito (*"procedi"*, *"applica"*) prima di effettuare qualsiasi scrittura su disco.
 
 ---
