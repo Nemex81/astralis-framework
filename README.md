@@ -1,7 +1,7 @@
 # 🏛️ ASTRALIS Framework
 ### Adaptive Standards for Testing, Rules, Accessibility & Level Integration Systems
 **Autore:** Luca (Senior Developer & Author) & Antigravity (AI Pair Programmer)  
-**Versione:** 3.0.1 (Universal Release)  
+**Versione:** 3.0.0 (Universal Release)  
 **Licenza:** Apache License 2.0  
 
 ---
