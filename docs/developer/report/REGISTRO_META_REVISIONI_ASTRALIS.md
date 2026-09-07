@@ -6,6 +6,14 @@ Questo registro traccia le revisioni architetturali interne del framework a part
 
 ---
 
+## [META-REV-006] Codificazione Canoni di Permissive Interaction Snap e Denoising Cinestetico nei Videogiochi 3D Accessibili
+- **Data**: 2026-09-07
+- **Ambito**: Accessibilità Videogiochi & Audiogame 3D, Game Design, Protocollo 4 & Protocollo 5
+- **Sintesi**: Estensione del modulo accessibilita_videogiochi_e_gameplay.md con la codificazione del canone Permissive Action Snap (risoluzione del paradosso cognitivo tra scansione volumetrica del mirino e raycast fisico nativo su elementi sottili/aperti con definizione dei 4 Cancelli Inviolabili) e del canone Denoising Cinestetico (soppressione a monte del chiacchiericcio sensoriale durante la marcia autonoma con tutela delle interrogazioni manuali a latenza zero).
+- **Stato**: Completato
+
+---
+
 ## [META-REV-005] Guardia Condizionale di Simmetria Multi-AI a Livello 0 & Release v3.0.2
 - **Data**: 2026-09-06
 - **Ambito**: Orchestrazione Multi-AI, Scripting Portabile, Protocollo 8 & Protocollo 9

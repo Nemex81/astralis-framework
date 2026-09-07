@@ -270,3 +270,41 @@ Questo documento raccoglie gli standard di game design e le soluzioni tecniche p
 3. **Coesistenza Non Distruttiva di Pilota e Sicurezza**:
    - L'attivazione di una manovra protettiva automatica (es. sneak salvavita da ciglio) non deve interrompere l'autopilota, ma operare come un modulatore di velocità/postura trasparente: il pilota prosegue la rotta a velocità protetta e la navigazione si conclude felicemente a destinazione.
 
+---
+
+## 🔕 17. PRINCIPIO DI QUIETE SENSORIALE NEI MOTI AUTONOMI/GUIDATI (DENOISING CINESTETICO)
+
+1. **Il Problema del Sovraccarico Sensoriale in Navigazione Autonoma (Sensory Chatter)**:
+   - Quando un modulo di navigazione o pilota automatico governa lo spostamento e l'orientamento della telecamera lungo una traiettoria calcolata da un pathfinder, i sensori ambientali passivi (mirino/raycast sui blocchi o elementi attraversati, ostacoli ordinari superati con auto-jump o aggiramento, avvisi di ciglio o discesa sicura lungo scale o corridoi protetti) generano una raffica continua di parole.
+   - Questo chiacchiericcio costante ("chatter") distrugge l'attenzione uditiva del giocatore non vedente, saturando la sintesi vocale e impedendo di percepire gli indizi sonori della rotta o le notifiche di stato della marcia.
+
+2. **Soppressione Selettiva a Monte dei Sensori Ambientali Passivi**:
+   - Il sistema deve offrire interruttori dedicati di configurazione (tutti attivi di default) che sopprimono a monte il flusso informativo passivo non appena il movimento autonomo è attivo (`isAutonomousMovementActive`).
+   - La soppressione a monte deve aggiornare i puntatori di stato interni (pattern "Silent Commit") per evitare scatti o raffiche vocali di recupero non appena la marcia termina o si ferma.
+
+3. **Le Tre Invarianti Inviolabili del Denoising**:
+   1. **Sicurezza Fisica Fail-Safe Intoccabile**: I dispositivi di sicurezza fisica e di frenata (es. auto-sneak hardware, collision brake, arresto su ciglio) restano attivi ed operativi al 100% per proteggere il personaggio in qualsiasi istante.
+   2. **Fast-Path Immediato per Minacce Letali (`CRITICAL`)**: Eventi di pericolo mortale immediato (fuoco, lava, vuoto, nemici a contatto) scavalcano qualsiasi silenziamento con priorità assoluta e interrompono all'istante la sintesi a latenza zero ($0\text{ ms}$).
+   3. **Tutela Totale delle Interrogazioni Manuali Intenzionali (`DirectInteractionShield`)**: Qualsiasi comando impartito esplicitamente da tastiera dall'utente (es. query del mirino, centramento visuale orizzonte, bussola, scansione nemici) gode di un token di immunità temporale e risponde immediatamente, con assoluta trasparenza anche a marcia in corso.
+
+---
+
+## 🚪 18. PRINCIPIO DEL MAGNETISMO D'AZIONE & ALLINEAMENTO TRA VOLUME PERCETTIVO E RAYCAST FISICO (PERMISSIVE INTERACTION SNAP)
+
+1. **Il Paradosso del Divario tra Volume Percettivo e Raycast Fisico**:
+   - Nei videogiochi accessibili, audiogame 3D e mondi voxel/virtuali, i sistemi di assistenza vocale utilizzano scansioni volumetriche generose (es. micro-raymarch a passi densi o bounding box di cella intera $1 \times 2 \times 1\text{ m}$) per consentire allo screen reader di individuare elementi sottili o varchi (porte aperte, botole, cancelletti, leve, interruttori). Lo screen reader annuncia chiaramente: *"Porta aperta davanti a te"*.
+   - Tuttavia, i motori fisici convenzionali (Unity, Unreal, Godot, motori voxel o simulativi) risolvono l'azione del click di interazione tramite un raycast matematico rettilineo infinitesimale calcolato sulla collision box o mesh reale dell'oggetto.
+   - Quando un elemento a battente (porta, cancelletto) è aperto, la sua massa fisica ruota adagiandosi allo stipite, riducendosi a una lamina millimetrica (es. soli pochi pixel o frazioni di centimetro), lasciando oltre l'$80\%$ del volume del varco occupato da aria vuota.
+   - *Se* il giocatore non vedente preme il tasto di interazione fidandosi dell'annuncio vocale, *allora* il raycast fisico nativo scivola attraverso l'aria vuota intercettando il muro posteriore o disperdendosi nel vuoto (`MISS`), rendendo l'interazione inefficace e costringendo a una frustrante ricerca millimetrica dello stipite al buio.
+
+2. **La Regola del Permissive Action Snap (Magnetismo d'Azione)**:
+   - Non è sufficiente che il mirino "veda" l'oggetto per vocalizzarlo: **l'azione di interazione primaria deve essere magneticamente agganciata e deviata sul target accessibile**.
+   - *Se* l'utente scatena un input di interazione, *allora* il sistema verifica se il puntamento accessibile sta inquadrando un elemento aperto/interagibile entro la portata di reach e, in caso positivo, commuta atomisticamente l'hit result dell'azione fisica sull'elemento mirato.
+
+3. **I 4 Cancelli Inviolabili di Sicurezza dell'Interazione Permissiva**:
+   1. **Cancello 1 — Priorità Assoluta Entità**: Se il raycast fisico sta già intercettando un'entità primaria (mob, NPC, alleato, veicolo), il magnetismo sui blocchi viene tassativamente disattivato per consentire il dialogo, commercio o combattimento.
+   2. **Cancello 2 — Trasparenza Puntamento Diretto**: Se il cursore dell'utente colpisce già fisicamente la hitbox/stipite reale dell'oggetto, non si applica alcuna deviazione artificiale, preservando il flusso nativo del motore di gioco.
+   3. **Cancello 3 — Rigore di Portata (Zero-Cheat)**: Il raggio di calcolo del magnetismo deve coincidere incondizionatamente con la massima distanza fisica di interazione lecita del personaggio (`reachDistance`), impedendo azionamenti a distanza non autorizzata.
+   4. **Cancello 4 — Esclusione Meccanismi non Manuali**: Gli elementi azionabili unicamente tramite energia esterna, redstone o chiavi (es. porte blindate o di ferro) devono essere rigorosamente esclusi dal magnetismo d'azione a mano libera.
+
+
