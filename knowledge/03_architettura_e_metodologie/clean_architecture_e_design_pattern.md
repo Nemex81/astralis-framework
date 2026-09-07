@@ -216,3 +216,45 @@ Quando si lavora all'interno di un repository derivato da un progetto open-sourc
 3. **Disaccoppiamento Assoluto tra Guardie e Intento**:
    - Le guardie di sicurezza sintetiche mantengono la libertà di pilotare lo stato di gioco per proteggere l'entità, ma non possono mai contaminare il canale di lettura dell'intento fisico umano.
 
+---
+
+## 🔄 14. PATTERN FSM CENTRALIZZATO VS CATENA DI TICK FRAMMENTATA (CENTRALIZED STATE MACHINE OVER TICK CHAINS)
+
+1. **Il Problema delle Catene Cinetiche a Più Frame**:
+   - Nei motori di gioco o simulazioni realtime, l'automazione di manovre composte (es. arresto, interazione su un blocco/oggetto, riallineamento e ripresa del moto) viene talvolta implementata tramite contatori di frame/tick dispersi nei campi del modulo di locomozione (es. `maneuverTicks++` con blocchi sequenziali `if (ticks == 1) ... else if (ticks == 2) ...`).
+   - Questo approccio è intrinsecamente fragile: dipende dal framerate/TPS del processore, soffre di race condition in caso di lag o carichi improvvisi, e frammenta lo stato logico in variabili orfane difficili da tracciare e bonificare.
+
+2. **La Soluzione FSM Centralizzata**:
+   - Qualsiasi sequenza di interazione distribuita nel tempo deve essere governata da un gestore dedicato a **Macchina a Stati Finiti (FSM)** registrato sul loop principale del client o del motore.
+   - La macchina opera secondo contratti deterministici:
+     - *Stati Espliciti*: Transizioni governate da condizioni geometriche o di stato misurabili, mai da contatori ciechi o timer non sincronizzati;
+     - *Single Responsibility*: Il modulo di movimento delega completamente l'interazione al gestore e si limita a interrogarne lo stato;
+     - *Determinismo Headless*: Il gestore espone seam di test (orologio virtuale / fornitori di timestamp) consentendo la verifica esaustiva di tutti i rami di transizione a 0 ms senza dipendere dal rendering visivo.
+
+---
+
+## 🏗️ 15. PATTERN DELEGAZIONE UNIFICATA PER AZIONI CONDIVISE TRA MODALITÀ (UNIFIED ACTION DELEGATION)
+
+1. **Il Rischio di Bivio Comportamentale (Dual-Path Divergence)**:
+   - Quando una medesima azione nel mondo applicativo o di gioco (es. apertura/chiusura di una porta o varco, azionamento di un dispositivo, raccolta di risorse) deve funzionare sia durante il controllo manuale (input diretto da tastiera/controller), sia durante la navigazione guidata o assistita (autopilota, pathfollowing);
+   - Duplicare la logica nei due percorsi o implementare rami separati (`if (isAutoPilot) { ... } else { ... }`) produce divergenze percettive, asimmetrie di bug e doppio costo di manutenzione.
+
+2. **La Regola della Delegazione Unica**:
+   - L'azione fisica o logica deve essere implementata **una sola volta** all'interno di un manager condiviso.
+   - Sia il gestore del comando manuale sia il motore di marcia autonoma si limitano a registrare la sessione d'azione verso lo stesso manager comune.
+   - **Invariante Percettiva per Screen Reader**: Per il giocatore o utente non vedente, l'esperienza sensoriale (audio 3D, feedback di stato, tempi di reazione) deve essere perfettamente coerente e identica indipendentemente dalla modalità di locomozione adottata.
+
+---
+
+## 🧹 16. PRINCIPIO DI NON-COESISTENZA DEI MECCANISMI CONCORRENTI (ZERO RESIDUI NEI REFACTORING)
+
+1. **Il Paradosso del Debito Residuo nei Refactoring**:
+   - Quando un'architettura o un algoritmo viene sostituito da una soluzione più robusta ed efficace, lasciare in vita campi obsoleti, getter/setter deprecati, reset parziali in metodi di avvio/arresto o interi blocchi disattivati crea un debito tecnico tossico silenzioso.
+   - Tali frammenti confondono i futuri cicli di sviluppo, rischiano di riattivarsi accidentalmente per effetti collaterali o reflection, e complicano l'analisi telemetrica.
+
+2. **La Regola Aurea dello Zero Residui**:
+   - Qualsiasi refactoring che introduce un nuovo meccanismo deve includere tassativamente la **bonifica integrale preventiva o contestuale** del meccanismo superato.
+   - Non è ammessa la convivenza di due logiche concorrenti per il medesimo scopo, salvo esplicite fasi di migrazione protetta a tempo determinate da contratti formali.
+   - Prima di considerare completata l'implementazione, l'assistente AI esegue una ricerca esaustiva (`grep_search`) di tutti i simboli dismessi nell'intero codebase, verificandone la totale rimozione.
+
+

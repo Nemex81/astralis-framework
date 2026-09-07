@@ -287,6 +287,9 @@ Ciascun protocollo definisce un flusso di lavoro atomico, i suoi requisiti di in
   5. *Barriera 5: Compilazione, Test di Non-Regressione & Rollback Automatico a 1-Click*:
      - Esecuzione immediata di compilazione e test automatici;
      - In caso di fallimento, scatta il **Rollback Automatico Istantaneo** con notifica dell'elemento critico; a test superati, registrazione in `CHANGELOG.md` sotto `⚙️ Modifiche & Refactoring`.
+  6. *Integrazione Obbligatoria nei Piani di Refactoring (Contratto D0 Clean Sweep)*:
+     - Quando un piano tecnico di tipo *Refactoring* o *Implementativo* sostituisce un meccanismo preesistente con una nuova architettura, il primo contratto del piano (`D0`) deve essere formalmente dedicato alla bonifica integrale di TUTTI i residui del vecchio meccanismo (campi, metodi, getter/setter, reset nei metodi di ciclo di vita, blocchi logici concorrenti, import orfani).
+     - La bonifica del codice vecchio precede l'innesto del nuovo sistema per impedire alla radice la convivenza transitoria di logiche concorrenti o comportamenti spuri.
 
 ---
 

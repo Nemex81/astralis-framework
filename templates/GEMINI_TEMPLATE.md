@@ -13,7 +13,7 @@ Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vinc
 
 ---
 
-## 🛡️ LE 6 REGOLE AUREE LOCALI INVIOLABILI
+## 🛡️ LE 7 REGOLE AUREE LOCALI INVIOLABILI
 
 1. **Regola 0: Dialogo a 2 Tempi & Gating Semantico (Default Consultivo Permanente)**:
    - L'assistente AI analizza, propone e pianifica; non modifica mai file in modo autonomo: attendi sempre la conferma esplicita dell'utente (*"procedi"*, *"applica"*, *"esegui"*).
@@ -55,6 +55,10 @@ Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vinc
    - Cancello 4 (Named Contracts D0..DN / S1..SN): contratti formali numerati;
    - Cancello 5 (Determinismo Headless): test seams a 0 ms senza dipendenze temporali;
    - Cancello 6 (Budget Token & Anti-Bloat Normativo): file router $\le 250$ righe, zero duplicazioni nei prompt.
+
+7. **Principio di Integrità Evolutiva & Bonifica dei Residui (Zero Meccanismi Concorrenti Obsoleti)**:
+   - Quando un'architettura, flusso, funzione o componente viene sostituito o evoluto da una nuova soluzione, è fatto divieto categorico di lasciare coesistere elementi del vecchio meccanismo (codice morto, campi orfani, logiche concorrenti, frammenti obsoleti o deleteri).
+   - Ogni transizione include sistematicamente, come parte integrante dell'intervento, la bonifica completa e l'eliminazione verificata di tutti i residui del sistema superato prima di dichiarare conclusa l'opera, azzerando alla radice ambiguità cognitive e debiti tecnici silenti.
 
 ---
 

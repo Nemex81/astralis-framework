@@ -26,3 +26,7 @@ Ogni proposta tecnica deve soddisfare i 7 assi: Validità, Efficacia, Coerenza, 
     > *"Vuoi che avviamo ora la sessione formale di Auto-Apprendimento (Fase 4) per elaborare la bozza dettagliata delle regole e aggiornare le schede di conoscenza e governance?"*
 - **Fase 4 (Auto-Apprendimento Continuo — Esecuzione al via libera di Luca)**:
   - All'autorizzazione di Luca, l'assistente entra formalmente in Fase 4: mappa i file di destinazione (`knowledge/`, `GEMINI.md`, Master Hub), redige i paragrafi completi pronti per l'inserimento e richiede la convalida finale prima di applicarli.
+
+## 5. Prassi di Clean Sweep Preventivo come Contratto D0 nei Refactoring
+1. **Principio di Non-Proliferazione dei Residui**: Quando si sostituisce un'architettura, una funzione o un algoritmo con una soluzione più evoluta, è fatto divieto categorico di lasciare coesistere residui del vecchio sistema (campi di stato, getter/setter deprecati, reset parziali, blocchi commentati o logiche concorrenti).
+2. **Il Contratto D0 Obbligatorio**: Nei piani tecnici di refactoring, il primo contratto (`D0 — Clean Sweep`) è interamente dedicato alla bonifica sistematica del vecchio codice. La rimozione viene verificata con scansione globale (`grep_search`) e convalidata da compilazione e test prima di procedere con l'innesto della nuova soluzione.

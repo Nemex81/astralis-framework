@@ -75,10 +75,13 @@ Questo documento raccoglie gli standard di game design e le soluzioni tecniche p
    - Durante le fasi notturne, dungeon o ambienti ostili, i nemici aggressivi (`Enemy` / mob ostili) che entrano nel raggio critico di ingaggio (entro 6 metri/blocchi) devono innescare un canale di allerta dedicato:
      - **Segnale Acustico 3D Percussivo**: Avviso sonoro posizionale immediato per stimolare il riflesso rapido.
      - **Vocalizzazione Prioritaria Interruttiva**: Annuncio telegrafico del tipo di minaccia e della coordinata vettoriale relativa (*"Attenzione: [Nemico] X metri avanti/indietro, Y in alto/basso, Z a sinistra/destra"*).
-3. **Navigazione Guidata a Step con Gestione Porte e Varchi**:
+3. **Navigazione Guidata a Step con Gestione Porte e Varchi (AutoOpen & AutoClose)**:
    - Nei percorsi calcolati da un autopilota o guida passo-passo:
-     - In presenza di una porta, botola o cancello chiuso lungo il tragitto, il movimento automatico deve arrestarsi a distanza di sicurezza (1.5-2 metri), orientare la visuale verso l'interruttore/battente e invitare esplicitamente il giocatore all'interazione (*"Porta chiusa davanti a te. Premi [Tasto Interazione] per aprire"*).
+     - In presenza di una porta, botola o cancello chiuso lungo il tragitto, il movimento automatico deve arrestarsi a distanza di sicurezza (1.5-2 metri), orientare la visuale UNA SOLA volta verso il varco e invitare esplicitamente il giocatore all'interazione (*"Porta chiusa davanti a te. Premi [Tasto Interazione] per aprire"*).
      - Non appena il varco viene aperto, il sistema conferma l'azione (*"Porta aperta. Procedi verso [Target]"*) e riprende automaticamente la marcia.
+   - **AutoClose a Soglia Geometrica (Zero Rotazione)**:
+     - Quando il giocatore attraversa completamente il varco superando la soglia geometrica di sicurezza ($d_{\text{centro blocco}} \ge 0.90\text{ m}$), il sistema invia programmaticamente il comando di chiusura (interazione logica/diretta) senza ruotare la visuale del giocatore (Principio di Intangibilità della Bussola Mentale — Sezione 19).
+     - Esclusione rigorosa di varchi metallici o meccanismi blindati azionabili solo tramite circuiti o chiavi esterne.
 
 ---
 
@@ -306,5 +309,25 @@ Questo documento raccoglie gli standard di game design e le soluzioni tecniche p
    2. **Cancello 2 — Trasparenza Puntamento Diretto**: Se il cursore dell'utente colpisce già fisicamente la hitbox/stipite reale dell'oggetto, non si applica alcuna deviazione artificiale, preservando il flusso nativo del motore di gioco.
    3. **Cancello 3 — Rigore di Portata (Zero-Cheat)**: Il raggio di calcolo del magnetismo deve coincidere incondizionatamente con la massima distanza fisica di interazione lecita del personaggio (`reachDistance`), impedendo azionamenti a distanza non autorizzata.
    4. **Cancello 4 — Esclusione Meccanismi non Manuali**: Gli elementi azionabili unicamente tramite energia esterna, redstone o chiavi (es. porte blindate o di ferro) devono essere rigorosamente esclusi dal magnetismo d'azione a mano libera.
+
+---
+
+## 🧭 19. PRINCIPIO DI INTANGIBILITÀ DELLA BUSSOLA MENTALE DEL GIOCATORE (PRESERVAZIONE DELL'ORIENTAMENTO VISIVO)
+
+1. **Il Ruolo Vitale dell'Orientamento Visivo per il Non Vedente**:
+   - Per un giocatore o sviluppatore che interagisce tramite sintesi vocale e audio 3D posizionale, l'orientamento della telecamera (pitch, yaw, coordinate cardinali) costituisce l'unico asse di ancoraggio della propria **mappa mentale dello spazio circostante**.
+   - Tutti i feedback vettoriali ("davanti", "alle spalle", "a sinistra", "a destra") e la percezione dei gradienti sonori stereofonici o surround dipendono istante per istante dalla stabilità e prevedibilità di questo vettore.
+   - Variazioni forzate e impreviste della visuale non richieste esplicitamente dall'utente rischiano di produrre un grave disorientamento cognitivo, equivalente a ruotare improvvisamente la mappa nelle mani di chi naviga al buio.
+
+2. **Regola per Operazioni Rapide e Semplici (Default Fortemente Consigliato)**:
+   - Per azioni fisiche ordinarie e circoscritte nel mondo virtuale (es. chiusura di porte, cancelletti o botole alle spalle post-attraversamento, azionamento di interruttori/pulsanti, raccolta rapida di oggetti, toggles elementari), è **fortemente consigliato privilegiare l'interazione programmatica/logica diretta sul target**, mantenendo la telecamera e lo sguardo del personaggio perfettamente immobili.
+   - Si evitano così fragili manovre cinetiche multi-tick (es. girare il personaggio di 180° per cliccare e poi tentare di riallinearlo in avanti), garantendo fluidità motoria e stabilità acustica assoluta.
+
+3. **Regola per Automatismi Complessi, Manovre Composite o Casi Non Codificati (Gating con l'Autore)**:
+   - Qualora una funzionalità avanzata richieda sequenze articolate (es. cinematica di navigazione su veicoli/velivoli, aggancio guidato a ormeggi/stazioni, inquadrature interattive di precisione, sequenze registiche) che necessitino dell'orientamento pilotato della telecamera:
+     * **Divieto di Scelta Arbitraria Autonoma**: L'assistente AI non applica rotazioni forzate su propria supposizione o euristica;
+     * **Consultazione Preventiva con l'Autore**: L'approccio cinetico deve essere preventivamente discusso e concordato con lo sviluppatore/autore dell'applicazione;
+     * **Stipula del Contratto Operativo Contestuale**: L'intervento viene formalizzato nel Piano Tecnico definendo esplicitamente le tutele percettive necessarie (es. cue sonoro di pre-avviso rotazione, transizione morbida/interpolata vs snap, ripristino deterministico dell'azimut originario al termine della manovra, o attivazione di un beacon audio per consentire all'utente di ricalibrare la propria bussola mentale).
+
 
 

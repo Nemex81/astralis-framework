@@ -4,6 +4,29 @@
 
 Tutte le modifiche rilevanti, i rilasci e le evoluzioni del framework universale **ASTRALIS** sono tracciate in questo documento.
 
+## 🚀 [v3.0.3] — 2026-09-07 (Evolutionary Integrity, Centralized FSM, Clean Sweep D0 & Visual Orientation Shield)
+
+### 🌟 Integrità Evolutiva, Zero Residui & Refactoring Disciplinato
+- **Principio di Integrità Evolutiva & Bonifica dei Residui (`clean_architecture_e_design_pattern.md` §16, `GEMINI_TEMPLATE.md` Regola Aurea 7)**:
+  - Codificato il principio di architettura pulita contro il debito tecnico tossico: divieto categorico di lasciare coesistere codice o strutture obsolete, parziali, morte o concorrenti a seguito dell'introduzione di una nuova soluzione;
+  - Obbligo di scansione globale esaustiva (`grep_search`) prima di dichiarare completato qualsiasi refactoring.
+- **Pattern FSM Centralizzato vs Catena di Tick Frammentata (`clean_architecture_e_design_pattern.md` §14)**:
+  - Superamento delle sequenze a frame/tick dispersi nei moduli di locomozione; adozione di macchine a stati deterministiche sul loop principale con condizioni geometriche misurabili e seam di test headless a 0 ms.
+- **Pattern Delegazione Unificata per Azioni Condivise tra Modalità (`clean_architecture_e_design_pattern.md` §15)**:
+  - Unificazione implementativa per azioni motorie condivise tra input manuale e guida autonoma, garantendo coerenza percettiva assoluta per lo screen reader ed eliminando biforcazioni di bug.
+- **Contratto D0 Clean Sweep Obbligatorio (`catalogo_protocolli_operativi_astralis.md` Protocollo 11, `PIANO_TECNICO_TEMPLATE.md`, `00_consuetudini_operative_template.md`)**:
+  - Formalizzato il primo contratto denominato (`D0`) interamente dedicato alla bonifica sistematica dei residui nei piani tecnici di refactoring prima dell'innesto del nuovo sistema.
+
+### 🎮 Accessibilità Gameplay & Preservazione della Bussola Mentale
+- **Principio di Intangibilità della Bussola Mentale del Giocatore (`accessibilita_videogiochi_e_gameplay.md` §19)**:
+  - Riconoscimento dell'orientamento della telecamera come perno fondamentale della mappa cognitiva dell'utente non vedente;
+  - *Per operazioni rapide e semplici*: raccomandazione categorica dell'interazione programmatica/logica diretta a visuale immobile (es. varchi, botole, interruttori alle spalle);
+  - *Per automatismi complessi o non codificati*: divieto di rotazioni forzate arbitrarie; obbligo di consultazione preventiva con l'autore e stipula di un apposito Contratto Operativo Contestuale con adeguate tutele sensoriali (cue sonori, beacon audio, ripristino azimut).
+- **Estensione Gestione Varchi con AutoClose a Soglia Geometrica (`accessibilita_videogiochi_e_gameplay.md` §5.3)**:
+  - Definizione dell'invariante di chiusura automatica determinata dal superamento della distanza euclidea di sicurezza ($d \ge 0.90\text{ m}$) senza rotazione visuale ed escludendo meccanismi metallici/blindati.
+
+---
+
 ## 🚀 [v3.0.2] — 2026-09-06 (Conditional Multi-AI Symmetry Guard & Level 0 Detection)
 
 ### 🌟 Orchestrazione Multi-AI Condizionale, Anti-Bloat & Probing Esecutivo

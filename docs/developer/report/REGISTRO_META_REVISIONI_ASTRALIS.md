@@ -6,6 +6,14 @@ Questo registro traccia le revisioni architetturali interne del framework a part
 
 ---
 
+## [META-REV-007] Integrità Evolutiva, FSM Centralizzato, Clean Sweep D0 e Preservazione Orientamento Visivo
+- **Data**: 2026-09-07
+- **Ambito**: Clean Architecture, Protocollo 11 (Clean Sweep D0), Accessibilità Gameplay & Template Allineati
+- **Sintesi**: Codificazione del Principio di Integrità Evolutiva & Bonifica dei Residui (Regola Aurea 7 in GEMINI_TEMPLATE.md e Sezione 16 in clean_architecture_e_design_pattern.md), introduzione dei pattern FSM Centralizzato (Sezione 14) e Delegazione Unificata (Sezione 15), formalizzazione della clausola Contratto D0 Clean Sweep nel Protocollo 11 e in PIANO_TECNICO_TEMPLATE.md, ed estensione del modulo gameplay con l'AutoClose geometrico (Sezione 5.3) e il canone modulare a due livelli di Intangibilità della Bussola Mentale del Giocatore (Sezione 19: default programmatica diretta per operazioni semplici; accordo con l'autore e contratto contestuale per automatismi complessi).
+- **Stato**: Completato
+
+---
+
 ## [META-REV-006] Codificazione Canoni di Permissive Interaction Snap e Denoising Cinestetico nei Videogiochi 3D Accessibili
 - **Data**: 2026-09-07
 - **Ambito**: Accessibilità Videogiochi & Audiogame 3D, Game Design, Protocollo 4 & Protocollo 5

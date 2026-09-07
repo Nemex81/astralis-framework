@@ -59,6 +59,10 @@
 ## 🏛️ 2. Architettura Logica, Contratti Denominati & Modello Dati
 
 ### 2.1 Named Contracts (Decisioni di Design & Contratti Modulari)
+- **Contratto D0 — Clean Sweep & Bonifica Residui (Obbligatorio per Refactoring / Sostituzioni di Meccanismi)**:
+  - *Precondizioni formali*: Censimento dei simboli, campi, metodi, reset nei metodi di ciclo di vita e logiche del vecchio sistema da dismettere.
+  - *Postcondizioni osservabili*: Rimozione integrale di tutti i riferimenti verificata con scansione globale (`grep_search`); build e test eseguiti con successo.
+  - *Invarianti di Non-Regressione*: Nessuna coesistenza di logiche concorrenti, zero residui orfani.
 - **Contratto D1 / S1 — [Nome Contratto]**:
   - *Precondizioni formali*: [Cosa deve essere vero prima della chiamata]
   - *Postcondizioni osservabili*: [Cosa deve essere garantito dopo l'esecuzione]
