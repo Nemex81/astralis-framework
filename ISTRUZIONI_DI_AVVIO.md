@@ -1,9 +1,9 @@
-# 🚀 ASTRALIS STARTER KIT — ISTRUZIONI RAPIDE DI AVVIO (v3.0.2)
+# 🚀 ASTRALIS STARTER KIT — ISTRUZIONI RAPIDE DI AVVIO (v3.0.4)
 # Autore: Luca (Sviluppatore Senior Non Vedente con Screen Reader NVDA) & Antigravity
 # Framework: ASTRALIS (Adaptive Standards for Testing, Rules, Accessibility & Level Integration Systems)
 # Master Hub: <astralis-hub>
 
-Benvenuto in **ASTRALIS v3.0.2**, l'ecosistema di governance a 3 livelli, 12 protocolli operativi, disciplina di versionamento AVF e accessibilità universale di Luca & Antigravity!
+Benvenuto in **ASTRALIS v3.0.4**, l'ecosistema di governance a 3 livelli, 12 protocolli operativi, disciplina di versionamento AVF e accessibilità universale di Luca & Antigravity!
 
 Questo pacchetto ti consente sia di configurare da zero il tuo ambiente in meno di 1 minuto (Protocollo Onboarding), sia di aggiornare un'installazione preesistente preservando al 100% tutte le tue personalizzazioni con l'**Aggiornamento Integrativo a Cascata** (Protocollo Aggiornamento).
 
@@ -68,3 +68,6 @@ Durante l'Onboarding o l'Aggiornamento Integrativo, ASTRALIS gestisce automatica
    - Tutti i progetti adottano la specifica a 3+1 cifre (`1ª Versione / Major`, `2ª Aggiornamento / Minor`, `3ª Revisione / Patch`, `4ª Micro-Fix / Doc`). Nei progetti con changelog esistente, lo storico pregresso a 3 cifre viene tutelato e integrato senza alcuna alterazione.
 4. **Integrazione Opzionale Copiloti Secondari (ChatGPT / Codex / Claude — `AGENTS.md`)**:
    - Se utilizzi un secondo assistente AI per il pair programming (come ChatGPT / Codex / Claude), ASTRALIS include la suite di template pronti all'uso in `templates/collaboratori_ai/`. Questa funzionalità è al 100% facoltativa (Opt-In): non vincola in alcun modo l'inizializzazione su una nuova macchina né l'aggiornamento di sistemi esistenti, che rimangono completamente autosufficienti con Antigravity.
+5. **Rilevamento Proattivo Aggiornamenti (Pattern Deferred Query & Update Prompt)**:
+   - All'avvio della prima interazione di ogni sessione, ASTRALIS verifica silenciosamente la presenza di nuove release nel repository ufficiale (`https://github.com/Nemex81/astralis-framework`) tramite lo script leggero `scripts/verifica_aggiornamenti_remoti.ps1`.
+   - Se il sistema è aggiornato o offline, il controllo è impercettibile (zero rumore per NVDA); se è disponibile una nuova versione, la tua domanda viene salvata e visualizzata con un breve riassunto prima di chiederti se aggiornare subito o proseguire con la richiesta.

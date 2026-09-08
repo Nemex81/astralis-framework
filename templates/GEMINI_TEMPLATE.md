@@ -60,6 +60,11 @@ Questo file costituisce l'**Hub Centrale di Contesto Locale** del progetto, vinc
    - Quando un'architettura, flusso, funzione o componente viene sostituito o evoluto da una nuova soluzione, è fatto divieto categorico di lasciare coesistere elementi del vecchio meccanismo (codice morto, campi orfani, logiche concorrenti, frammenti obsoleti o deleteri).
    - Ogni transizione include sistematicamente, come parte integrante dell'intervento, la bonifica completa e l'eliminazione verificata di tutti i residui del sistema superato prima di dichiarare conclusa l'opera, azzerando alla radice ambiguità cognitive e debiti tecnici silenti.
 
+8. **Rilevamento Proattivo Aggiornamenti (Pattern Deferred Query & Update Prompt)**:
+   - All'avvio della prima interazione di una chat, l'assistente esegue silenziosamente lo script leggero `scripts/verifica_aggiornamenti_remoti.ps1`.
+   - *Se non ci sono nuove versioni*: silenzio assoluto (zero rumore vocale per NVDA) e risposta immediata all'utente.
+   - *Se è disponibile una nuova release di ASTRALIS*: memorizza temporaneamente la richiesta appena formulata dall'utente, visualizza una sintesi chiara ("Obiettivo" e "Descrizione") e propone la scelta trasparente: 1) procedere prima con l'aggiornamento di ASTRALIS; 2) procedere subito con la richiesta corrente rimandando l'aggiornamento.
+
 ---
 
 ## 🧭 Indice Ragionato della Base di Conoscenza Locale (`knowledge/`)

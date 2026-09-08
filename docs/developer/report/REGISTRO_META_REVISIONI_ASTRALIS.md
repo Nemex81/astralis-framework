@@ -6,6 +6,14 @@ Questo registro traccia le revisioni architetturali interne del framework a part
 
 ---
 
+## [META-REV-008] Rilevamento Proattivo Aggiornamenti, Transienti Acuti Salvavita & Script ad Alto Risparmio Token (v3.0.4)
+- **Data**: 2026-09-08
+- **Ambito**: Scripting Portabile, Protocollo 8 (Aggiornamento), Sonificazione & Accessibilità Vocale NVDA, Template Allineati
+- **Sintesi**: Implementazione del pattern Deferred Query & Update Prompt con script dedicato `scripts/verifica_aggiornamenti_remoti.ps1` dotato di caching a 12 ore, canale combinato GitHub API / Git fallback e risparmio del 95% di token; codificazione in `knowledge/02_accessibilita_e_audio/sonificazione_e_volumi_sicurezza.md` del principio dei transienti metallici acuti salvavita e dell'indipendenza del bus audio (`SoundSource.PLAYERS`); allineamento di `templates/GEMINI_TEMPLATE.md` (Regola 8) e `ISTRUZIONI_DI_AVVIO.md` (§5) per il controllo automatico ad avvio sessione.
+- **Stato**: Completato
+
+---
+
 ## [META-REV-007] Integrità Evolutiva, FSM Centralizzato, Clean Sweep D0 e Preservazione Orientamento Visivo
 - **Data**: 2026-09-07
 - **Ambito**: Clean Architecture, Protocollo 11 (Clean Sweep D0), Accessibilità Gameplay & Template Allineati

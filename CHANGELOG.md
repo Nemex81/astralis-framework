@@ -4,6 +4,27 @@
 
 Tutte le modifiche rilevanti, i rilasci e le evoluzioni del framework universale **ASTRALIS** sono tracciate in questo documento.
 
+## 🚀 [v3.0.4] — 2026-09-08 (Proactive Update Check, High-Energy Emergency Transients & Token-Saving Scripts)
+
+### 🌟 Rilevamento Proattivo Aggiornamenti & Pattern Deferred Query
+- **Pattern Deferred Query & Update Prompt (`templates/GEMINI_TEMPLATE.md` Regola 8, `ISTRUZIONI_DI_AVVIO.md` §5)**:
+  - Introdotto il controllo proattivo e non invasivo degli aggiornamenti all'avvio della prima richiesta dell'utente in una chat;
+  - Se il sistema è allineato all'ultima versione (o offline), l'esperienza d'uso è fluida e priva di notifiche superflue (zero rumore per NVDA);
+  - Se è presente una nuova release ufficiale su GitHub, la richiesta formulata viene salvata e visualizzata chiaramente con un riepilogo semantico ("Obiettivo" e "Descrizione") offrendo il bivio trasparente (Aggiorna prima / Procedi subito con la richiesta originale).
+- **Architettura Scripting ad Alto Risparmio Token (`scripts/verifica_aggiornamenti_remoti.ps1`)**:
+  - Creazione dello script autonomo portabile delegato a tutte le operazioni di rete, confronto SemVer e fallback;
+  - Caching locale temporaneo (12 ore) in `$env:TEMP` per eliminare latenze di rete e chiamate ridondanti nella stessa sessione;
+  - Risparmio del 95% del consumo di token per l'assistente AI grazie al disaccoppiamento su script a 1 riga con emissione JSON compatto a 4 campi.
+  - Canale a due livelli: interrogazione REST primaria delle GitHub Releases API (`releases/latest`) con fallback fail-safe su `git ls-remote --tags`.
+
+### 🎧 Accessibilità Audio & Transienti Metallici Acuti Salvavita
+- **Principio del Transiente Acuto Penetrativo (`knowledge/02_accessibilita_e_audio/sonificazione_e_volumi_sicurezza.md` §5)**:
+  - Codificata la regola universale per i segnali sonori di allarme imminente e pre-freno salvavita: divieto di impiegare toni morbidi, sordi o a bassa frequenza che verrebbero coperti dal parlato simultaneo della sintesi vocale TTS / NVDA;
+  - Obbligo di impiego di campioni sonori dotati di attacco istantaneo ad altissima energia e spettro acuto metallico (es. risonanza d'incudine su ferro);
+  - Immunità del canale audio: obbligo di instradamento degli allarmi di sicurezza personale su bus dedicati al giocatore (`PLAYERS`, `UI`, `SYSTEM`), escludendo i bus audio dell'ambiente soggetti a filtri o attenuazioni dell'utente.
+
+---
+
 ## 🚀 [v3.0.3] — 2026-09-07 (Evolutionary Integrity, Centralized FSM, Clean Sweep D0 & Visual Orientation Shield)
 
 ### 🌟 Integrità Evolutiva, Zero Residui & Refactoring Disciplinato

@@ -49,3 +49,15 @@ Questo documento definisce gli standard per la progettazione del paesaggio sonor
    - Questo previene l'effetto cacofonico e preserva l'headroom acustico per la sintesi vocale e i segnali di allarme.
 
 
+
+---
+
+## ⚡ 5. ALLARMI DI EMERGENZA SALVAVITA & PENETRAZIONE VOCALE (TRANSIENTI ACUTI)
+
+1. **Il Principio dei Transienti Metallici Acuti**:
+   - I suoni di allerta di emergenza e pre-freno imminente (es. ciglio di un baratro, trappola letale, pericolo mortale istantaneo) non devono mai utilizzare toni sordi, morbidi o a bassa frequenza. Tali toni verrebbero facilmente coperti e mascherati dalla sintesi vocale TTS / NVDA in riproduzione contemporanea.
+   - È fatto obbligo di impiegare campioni sonori dotati di un attacco istantaneo (transiente d'impatto ad altissima energia) e spettro armonico acuto metallico (es. risonanza d'incudine su ferro). Il picco frequenziale buca istantaneamente il parlato senza richiedere volumi pericolosi per l'apparato uditivo ($0.7\text{f} - 0.8\text{f}$).
+
+2. **Indipendenza del Canale Audio (Bus Personale vs Ambiente)**:
+   - I segnali sonori critici per l'incolumità personale del giocatore non devono mai essere emessi sui bus audio ambientali o degli elementi del mondo (es. `BLOCKS` o `WORLD`), dove le impostazioni utente o i filtri di riverbero possono attenuarli.
+   - Devono essere sempre instradati sul canale audio diretto del giocatore (`PLAYERS`, `UI` o `SYSTEM`), garantendo immunità assoluta da filtri di occlusione o cursori di volume dell'ambiente.
