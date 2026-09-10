@@ -7,7 +7,8 @@
 - **Data**: 2026-09-10
 - **Branch**: `experiment/astralis-next-clean-core`
 - **Baseline**: `bba70144535ea51f0b06587751367b64a564bfc9`
-- **Stato**: `[PROPOSTA FORMALIZZATA E VALIDATA — APPROVAZIONE DI LUCA PENDENTE]`
+- **Stato**: `[APPROVATA E2A — CONTRATTI VINCOLANTI — NESSUNA IMPLEMENTAZIONE AUTORIZZATA]`
+- **Approvazione**: conferma esplicita di Luca del 2026-09-10
 - **Specifica E2A primaria**: [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md)
 - **Piano padre**: [`PIANO_SPERIMENTALE_ASTRALIS_NEXT_CLEAN_CORE.md`](PIANO_SPERIMENTALE_ASTRALIS_NEXT_CLEAN_CORE.md)
 
@@ -556,7 +557,7 @@ Sono esclusi dall'MVP:
 
 ## 13. Criteri di accettazione
 
-La proposta è approvabile se:
+L'approvazione documentale è sostenuta dai seguenti criteri:
 
 1. ogni livello possiede una responsabilità non sovrapposta;
 2. le dipendenze sono unidirezionali e acicliche;
@@ -627,9 +628,9 @@ L'esito richiesto è arresto protetto, degradazione esplicita o richiesta mirata
 
 ---
 
-## 16. Decisioni proposte a Luca
+## 16. Decisioni approvate da Luca
 
-Si propone di approvare:
+Luca approva:
 
 1. la gerarchia a otto livelli;
 2. modalità come policy e non come esecutore;
@@ -650,7 +651,7 @@ Si propone di approvare:
 
 ## 17. Gating e stop obbligatorio
 
-Questa specifica è esclusivamente documentale. Non sono autorizzati:
+Questa specifica è stata approvata come contratto documentale. Non sono autorizzati:
 
 - creazione del registro delle capability;
 - creazione di manifest o JSON Schema;
@@ -662,4 +663,4 @@ Questa specifica è esclusivamente documentale. Non sono autorizzati:
 - avvio di E2B, E2C o E3;
 - modifica di `main`, Master Hub o repository di progetto.
 
-L'approvazione della specifica stabilirà i contratti, ma non autorizzerà la loro implementazione. Ogni fase successiva richiederà un nuovo consenso esplicito.
+L'approvazione della specifica stabilisce i contratti, ma non autorizza la loro implementazione. Ogni fase successiva richiede un nuovo consenso esplicito.

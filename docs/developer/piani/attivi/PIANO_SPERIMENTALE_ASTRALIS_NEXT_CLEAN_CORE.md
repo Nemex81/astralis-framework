@@ -7,15 +7,16 @@
 - **Data di formalizzazione**: 2026-09-10
 - **Branch dedicato**: `experiment/astralis-next-clean-core`
 - **Baseline Git protetta**: `d28d1f95159f2d4c48916381c3aeb3f1fd4b7d8f`
-- **Stato**: `[E2A ESTESA E VALIDATA — APPROVAZIONE PENDENTE — STOP PRIMA DI E2B]`
+- **Stato**: `[E2A APPROVATA E CHIUSA — STOP PRIMA DI E2B]`
+- **Approvazione E2A**: conferma esplicita di Luca del 2026-09-10
 - **Autorizzazione E1**: conferma esplicita di Luca del 2026-09-10
 - **Nome di lavoro**: `ASTRALIS Next`
 - **Versione finale**: da decidere dopo la prova; candidata v4.0.0 se i contratti pubblici risultano incompatibili con v3.x
 - **Strategia di riferimento**: [`STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md`](../../strategie/STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md)
 - **Piano architetturale di riferimento**: [`PIANO_TECNICO_TOKEN_SAVING_E_CONFIG.md`](PIANO_TECNICO_TOKEN_SAVING_E_CONFIG.md)
 - **Decisioni vincolanti**: [`DECISIONI_D0_ASTRALIS_V3_1_0.md`](DECISIONI_D0_ASTRALIS_V3_1_0.md)
-- **Annesso E2A proposto**: [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md)
-- **Annesso invocazioni proposto**: [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md)
+- **Annesso E2A approvato**: [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md)
+- **Annesso invocazioni approvato**: [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md)
 
 ---
 
@@ -316,10 +317,10 @@ Le due potature sono separate per rendere evidente la differenza fra materiale e
 - [x] formalizzare precedenza, provenienza, privacy e proiezione AI selettiva;
 - [x] formalizzare gerarchia delle invocazioni, capability, routine, protocolli, modalità e skill AI;
 - [x] validare la proposta sui 7 Assi e sulla Matrice a 3 Livelli;
-- [ ] ottenere l'approvazione esplicita di Luca sulla specifica E2A;
+- [x] ottenere l'approvazione esplicita di Luca sulla specifica E2A;
 - [x] fermarsi prima di E2B.
 
-La proposta è composta dagli annessi [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md) e [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md). Nessun profilo, schema eseguibile, collector, capability o struttura operativa è stato creato.
+E2A è stata approvata nella sua composizione formata dagli annessi [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md) e [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md). Nessun profilo, schema eseguibile, collector, capability o struttura operativa è stato creato.
 
 #### E2B ed E2C — Non avviate
 

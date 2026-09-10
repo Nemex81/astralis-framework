@@ -7,7 +7,8 @@
 - **Data**: 2026-09-10
 - **Branch**: `experiment/astralis-next-clean-core`
 - **Baseline E2A**: `b697a78df7759c3aaa3987fcfd8c9cb9c7dbfc5f`
-- **Stato**: `[PROPOSTA E2A ESTESA E VALIDATA — APPROVAZIONE DI LUCA PENDENTE]`
+- **Stato**: `[APPROVATA E2A — CONTRATTI VINCOLANTI — NESSUNA IMPLEMENTAZIONE AUTORIZZATA]`
+- **Approvazione**: conferma esplicita di Luca del 2026-09-10
 - **Piano padre**: [`PIANO_SPERIMENTALE_ASTRALIS_NEXT_CLEAN_CORE.md`](PIANO_SPERIMENTALE_ASTRALIS_NEXT_CLEAN_CORE.md)
 - **Annesso invocazioni**: [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md)
 - **Strategia**: [`STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md`](../../strategie/STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md)
@@ -378,7 +379,7 @@ Non deve essere usato per profilazione commerciale, identificazione persistente,
 
 ## 9. Criteri di accettazione E2A
 
-La proposta è approvabile se:
+L'approvazione documentale è sostenuta dai seguenti criteri:
 
 1. ogni dato ha un'autorità e una destinazione univoche;
 2. profilo utente e macchina restano privati e separati;
@@ -444,9 +445,9 @@ L'esito richiesto è degradazione esplicita, richiesta mirata o arresto protetto
 
 ---
 
-## 12. Decisioni proposte a Luca
+## 12. Decisioni approvate da Luca
 
-Si propone di approvare congiuntamente:
+Luca approva congiuntamente:
 
 1. due profili privati distinti: utente dichiarativo e macchina rilevata;
 2. `machineId` casuale e divieto di fingerprint hardware;
@@ -464,7 +465,7 @@ Si propone di approvare congiuntamente:
 
 ## 13. Gating e prossima fase
 
-E2A è una proposta documentale. Fino all'approvazione esplicita di Luca non sono autorizzati:
+E2A è una specifica documentale approvata da Luca. L'approvazione non autorizza:
 
 - creazione di `ASTRALIS_HOME`;
 - raccolta di dati utente o macchina;
@@ -477,4 +478,4 @@ E2A è una proposta documentale. Fino all'approvazione esplicita di Luca non son
 - migrazione o modifica di repository di progetto;
 - modifica di `main` o del Master Hub.
 
-Dopo l'approvazione, E2B dovrà definire gli schemi formali e l'albero minimo su carta prima di crearli. E2C dovrà riscrivere soltanto i documenti minimi approvati. Il comportamento eseguibile resterà confinato a E3 e richiederà una nuova autorizzazione.
+La successiva E2B dovrà definire gli schemi formali e l'albero minimo su carta prima di crearli. E2C dovrà riscrivere soltanto i documenti minimi approvati. E2B, E2C e il comportamento eseguibile di E3 richiedono autorizzazioni nuove e distinte.
