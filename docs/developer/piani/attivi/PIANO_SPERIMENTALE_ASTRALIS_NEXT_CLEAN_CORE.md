@@ -7,7 +7,8 @@
 - **Data di formalizzazione**: 2026-09-10
 - **Branch dedicato**: `experiment/astralis-next-clean-core`
 - **Baseline Git protetta**: `d28d1f95159f2d4c48916381c3aeb3f1fd4b7d8f`
-- **Stato**: `[FORMALIZZATO 1A — INVENTARIO COMPLETO — NESSUNA ELIMINAZIONE O IMPLEMENTAZIONE AUTORIZZATA]`
+- **Stato**: `[E1 COMPLETATA — POTATURA PROTETTA VALIDATA — STOP PRIMA DI E2]`
+- **Autorizzazione E1**: conferma esplicita di Luca del 2026-09-10
 - **Nome di lavoro**: `ASTRALIS Next`
 - **Versione finale**: da decidere dopo la prova; candidata v4.0.0 se i contratti pubblici risultano incompatibili con v3.x
 - **Strategia di riferimento**: [`STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md`](../../strategie/STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md)
@@ -286,14 +287,23 @@ Il superamento del budget richiede motivazione, analisi di impatto e approvazion
 
 ### E1 — Potatura protetta del solo branch
 
-- [ ] verificare nuovamente commit, branch e working tree;
-- [ ] rimuovere dal branch i 12 file `LASCIARE SU MAIN` in un commit dedicato;
-- [ ] rimuovere dal branch i 34 file `IMPORTARE DOPO` in un secondo commit dedicato;
-- [ ] verificare che nessuna eliminazione interessi `main`, Master Hub o file non tracciati;
-- [ ] produrre ricevuta con file rimossi e commit di recupero;
-- [ ] fermarsi prima delle riscritture.
+- [x] verificare nuovamente commit, branch e working tree;
+- [x] rimuovere dal branch i 12 file `LASCIARE SU MAIN` in un commit dedicato;
+- [x] rimuovere dal branch i 34 file `IMPORTARE DOPO` in un secondo commit dedicato;
+- [x] verificare che nessuna eliminazione interessi `main`, Master Hub o file non tracciati;
+- [x] produrre ricevuta con file rimossi e commit di recupero;
+- [x] fermarsi prima delle riscritture.
 
 Le due potature sono separate per rendere evidente la differenza fra materiale escluso e materiale differito.
+
+#### Ricevuta E1
+
+- **Piano formalizzato**: commit `7e85307149a4c7bcc7c6f8fbbe7466ead61d8226`.
+- **12 file lasciati su main**: commit `9a314545ad31fb2601f2c41b4f3333932a69c786`, contenente esclusivamente 12 eliminazioni.
+- **34 file differiti**: commit `65c4795ed9557aa7c8772b4699e5296c37cd1d97`, contenente esclusivamente 34 eliminazioni.
+- **Commit di recupero integrale**: baseline `d28d1f95159f2d4c48916381c3aeb3f1fd4b7d8f`.
+- **Confine verificato**: nessuna operazione eseguita su `main`, Master Hub o file non tracciati.
+- **Esito**: 46 file rimossi soltanto dal ramo sperimentale; E2 non avviata.
 
 ### E2 — Contratti e struttura vuota
 
@@ -455,17 +465,16 @@ L'esito rende il piano idoneo alla revisione decisionale di Luca, ma non autoriz
 
 ## 15. Gating e stop obbligatorio
 
-Questo piano autorizza esclusivamente analisi, classificazione e formalizzazione documentale.
+Alla formalizzazione iniziale questo piano autorizzava esclusivamente analisi, classificazione e documentazione. Luca ha successivamente autorizzato in modo esplicito la sola fase E1, ora completata e registrata nella relativa ricevuta.
 
-Non sono autorizzati:
+Con E1 conclusa, non sono autorizzati:
 
-- eliminazioni;
 - spostamenti;
 - riscritture dei 16 file;
-- rimozione dei 34 file differiti;
 - creazione della struttura minima;
 - manifest, schemi, script, fixture o test;
 - modifica di `main` o del Master Hub;
-- commit o push del presente piano.
+- importazione dei 34 file differiti;
+- avvio di E2, E3 o fasi successive.
 
-L'avvio di E1 richiede una nuova conferma esplicita di Luca dopo la revisione dell'inventario. E2 ed E3 richiedono autorizzazioni distinte e non sono implicite nell'approvazione di E1.
+E2 ed E3 richiedono autorizzazioni distinte e non sono implicite nell'approvazione o nel completamento di E1. Lo stato corrente impone lo stop prima di ogni riscrittura o creazione strutturale.
