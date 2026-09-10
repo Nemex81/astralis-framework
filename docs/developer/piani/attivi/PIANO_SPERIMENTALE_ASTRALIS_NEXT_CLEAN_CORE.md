@@ -7,7 +7,7 @@
 - **Data di formalizzazione**: 2026-09-10
 - **Branch dedicato**: `experiment/astralis-next-clean-core`
 - **Baseline Git protetta**: `d28d1f95159f2d4c48916381c3aeb3f1fd4b7d8f`
-- **Stato**: `[E2A FORMALIZZATA E VALIDATA — APPROVAZIONE PENDENTE — STOP PRIMA DI E2B]`
+- **Stato**: `[E2A ESTESA E VALIDATA — APPROVAZIONE PENDENTE — STOP PRIMA DI E2B]`
 - **Autorizzazione E1**: conferma esplicita di Luca del 2026-09-10
 - **Nome di lavoro**: `ASTRALIS Next`
 - **Versione finale**: da decidere dopo la prova; candidata v4.0.0 se i contratti pubblici risultano incompatibili con v3.x
@@ -15,6 +15,7 @@
 - **Piano architetturale di riferimento**: [`PIANO_TECNICO_TOKEN_SAVING_E_CONFIG.md`](PIANO_TECNICO_TOKEN_SAVING_E_CONFIG.md)
 - **Decisioni vincolanti**: [`DECISIONI_D0_ASTRALIS_V3_1_0.md`](DECISIONI_D0_ASTRALIS_V3_1_0.md)
 - **Annesso E2A proposto**: [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md)
+- **Annesso invocazioni proposto**: [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md)
 
 ---
 
@@ -313,11 +314,12 @@ Le due potature sono separate per rendere evidente la differenza fra materiale e
 - [x] formalizzare aree, identità, autorità e confini di scrittura;
 - [x] formalizzare profilo utente e profilo macchina senza raccolta reale;
 - [x] formalizzare precedenza, provenienza, privacy e proiezione AI selettiva;
+- [x] formalizzare gerarchia delle invocazioni, capability, routine, protocolli, modalità e skill AI;
 - [x] validare la proposta sui 7 Assi e sulla Matrice a 3 Livelli;
 - [ ] ottenere l'approvazione esplicita di Luca sulla specifica E2A;
-- [ ] fermarsi prima di E2B.
+- [x] fermarsi prima di E2B.
 
-La proposta è contenuta nell'annesso [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md). Nessun profilo, schema eseguibile, collector o struttura operativa è stato creato.
+La proposta è composta dagli annessi [`SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md`](SPECIFICA_CONTRATTUALE_E2A_ASTRALIS_NEXT.md) e [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md). Nessun profilo, schema eseguibile, collector, capability o struttura operativa è stato creato.
 
 #### E2B ed E2C — Non avviate
 
@@ -490,6 +492,7 @@ Con E1 conclusa, non sono autorizzati:
 - modifica di `main` o del Master Hub;
 - importazione dei 34 file differiti;
 - raccolta reale di dati utente o macchina;
+- creazione o esecuzione di capability, routine, protocolli, registri o skill AI;
 - avvio di E2B, E2C, E3 o fasi successive.
 
 L'approvazione della proposta E2A non autorizza E2B, E2C o E3. Lo stato corrente impone lo stop prima di ogni schema eseguibile, riscrittura, raccolta dati o creazione strutturale.

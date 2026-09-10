@@ -7,8 +7,9 @@
 - **Data**: 2026-09-10
 - **Branch**: `experiment/astralis-next-clean-core`
 - **Baseline E2A**: `b697a78df7759c3aaa3987fcfd8c9cb9c7dbfc5f`
-- **Stato**: `[PROPOSTA E2A FORMALIZZATA E VALIDATA — APPROVAZIONE DI LUCA PENDENTE]`
+- **Stato**: `[PROPOSTA E2A ESTESA E VALIDATA — APPROVAZIONE DI LUCA PENDENTE]`
 - **Piano padre**: [`PIANO_SPERIMENTALE_ASTRALIS_NEXT_CLEAN_CORE.md`](PIANO_SPERIMENTALE_ASTRALIS_NEXT_CLEAN_CORE.md)
+- **Annesso invocazioni**: [`SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md`](SPECIFICA_ARCHITETTURA_INVOCAZIONI_E_CAPABILITY_E2A.md)
 - **Strategia**: [`STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md`](../../strategie/STRATEGIA_ARCHITETTURA_ASTRALIS_HOME_E_MIGRAZIONE_PROGRESSIVA.md)
 - **Decisioni D0**: [`DECISIONI_D0_ASTRALIS_V3_1_0.md`](DECISIONI_D0_ASTRALIS_V3_1_0.md)
 
@@ -26,7 +27,8 @@ La specifica stabilisce:
 4. precedenza e provenienza della configurazione;
 5. profilo utente e profilo macchina;
 6. privacy e proiezione selettiva del contesto per le AI;
-7. compatibilità, accessibilità, concorrenza e migrazione.
+7. compatibilità, accessibilità, concorrenza e migrazione;
+8. gerarchia di invocazione, capability, protocolli, modalità e skill AI tramite l'annesso dedicato.
 
 Non autorizza implementazione, raccolta reale di dati, scansione del computer, creazione di `ASTRALIS_HOME`, migrazione o modifica di progetti.
 
@@ -436,6 +438,7 @@ L'esito richiesto è degradazione esplicita, richiesta mirata o arresto protetto
 
 - **Protocollo**: 43 controlli su struttura, coerenza, privacy, portabilità, modularità, compatibilità, accessibilità, collegamenti e confini Git.
 - **Esito**: 43 controlli superati su 43; nessun difetto documentale bloccante.
+- **Estensione invocazioni**: 62 controlli superati su 62 nell'annesso dedicato.
 - **Confine dell'evidenza**: la validazione riguarda la proposta E2A e non certifica runtime, validatore JSON Schema, prestazioni o baseline legacy.
 - **Stato operativo**: nessun dato è stato raccolto e nessun artefatto runtime è stato creato.
 
@@ -454,7 +457,8 @@ Si propone di approvare congiuntamente:
 7. Context Compiler selettivo come unico accesso ordinario dei collaboratori AI ai profili;
 8. nessuna raccolta, sincronizzazione o esportazione automatica;
 9. schema Draft 2020-12 offline con adattatore unico;
-10. stop obbligatorio dopo E2A prima di struttura, schemi reali o codice.
+10. architettura delle invocazioni definita nell'annesso E2A dedicato;
+11. stop obbligatorio dopo E2A prima di struttura, schemi reali o codice.
 
 ---
 
@@ -467,6 +471,7 @@ E2A è una proposta documentale. Fino all'approvazione esplicita di Luca non son
 - creazione dei file JSON o dei relativi schemi;
 - riscrittura dei documenti di onboarding;
 - modifica di script o template;
+- creazione di capability, routine, registri, protocolli o skill AI;
 - implementazione dei collector o del Context Compiler;
 - avvio di E2B, E2C o E3;
 - migrazione o modifica di repository di progetto;
